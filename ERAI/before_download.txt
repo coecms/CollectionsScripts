@@ -1,0 +1,5 @@
+module load python/2.7.3
+export PYTHONPATH=export
+PYTHONPATH=/apps/python/2.7.3/lib:/apps/python/2.7.3/include:/apps/python/2.7.3/bin:/home/581/pxp581/ecmwf-api-client-python
+export PATH=$PATH:/home/581/pxp581/ecmwf-api-client-python
+
