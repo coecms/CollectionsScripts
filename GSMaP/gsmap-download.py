@@ -1,4 +1,9 @@
 #!/usr/bin/python
+# This script downloads GSMaP data from the JAXA ftp server hokusai.eorc.jaxa.jp
+# used on raijin
+# Author: Paola Petrelli paola.petrelli@utas.edu.au
+# Last modified date: 
+#              2017-03-01
 from ftplib import FTP
 import os, time
 import zipfile
@@ -9,18 +14,19 @@ from time import gmtime
 
 class DataGetter:
     def __init__(self):
-        user = open("/g/data1/ua8/Download/GSMaP/.gsmap")
-        details=user.readlines()
-        user.close()
-        uname=details[0]
-        pword=details[1]
-        print uname,pword
+        #user = open("/g/data1/ua8/Download/GSMaP/.gsmap")
+        #details=user.readlines()
+        #user.close()
+        #uname=str(details[0])
+        #pword=str(details[1])
+        #print uname,pword
         self.updatedFiles = []
         self.newFiles = []
         self.errorFiles = []
         self.ftpHost = "hokusai.eorc.jaxa.jp"
         self.ftp = FTP(self.ftpHost)
-        self.ftp.login(uname,pword)
+        #self.ftp.login(uname, pword)
+        self.ftp.login("rainmap", "Niskur+1404")
 
     def processDataset(self, datasetName, localDir):
         self.localDir = localDir
@@ -28,47 +34,21 @@ class DataGetter:
         self.updatedFiles = []
         self.newFiles = []
         self.errorFiles = []
-        self.remoteDir = "/reanalysis_gauge/v6/daily/"
+        self.remoteDir = "reanalysis_gauge/v6/daily/"
         print "Processing dataset..." + datasetName
         os.chdir(self.localDir + datasetName)   # go to dataset dir
-        print os.getcwd()
         self.ftp.cwd(self.remoteDir + datasetName) # got to ftp dataset dir 
-        print "ftp ", self.ftp.pwd()
         self.ftp.retrlines("LIST", self.yearList.append)
-        for year in self.yearList:
-             print year[-4:]
-             mntList = self.doDirectory(year,True)
-             if mntList and year[-4:]=="1997":
-             #if mntList:
-                 for mn in mntList:
-                     fileList = self.doDirectory(mn,True)
-                     baseDir = os.getcwd()
-                     #print fileList 
-                     for f in fileList:
-                         self.handleFile(baseDir, f)
-                     self.ftp.cwd("../")  # get out of ftp month dir
-                     #print "ftp ", self.ftp.pwd()
-                     os.chdir("../")     #get out of local month dir
-                     #print os.getcwd()
-                 self.ftp.cwd("../")      # get out of ftp year dir
-                 os.chdir("../")     #get out of local year dir
-             else:
-                 fileList = []
-                 fileList = self.ftp.retrlines("LIST", fileList.append)
-                 baseDir = os.getcwd()
-                 for f in fileList:
-                     self.handleFile(baseDir, f)
-                 os.chdir("../")  # get out of year dir to skip or containing only files
-                 #print os.getcwd()
-                 self.ftp.cwd("../")  # get out of ftp year dir
-                 #print "ftp ", self.ftp.pwd()
+        for yrmn in self.yearList:
+            if yrmn[-6:]>='201009':
+                fileList = self.doDirectory(yrmn,True)
+                baseDir = os.getcwd()
+                for f in fileList:
+                    self.handleFile(baseDir, f)
+                self.ftp.cwd("../")  # get out of ftp year-month dir
+                os.chdir("../")     #get out of local year-month dir
         os.chdir("../")   # get out of local dataset dir
-        #print os.getcwd()
         self.ftp.cwd("../")  # get out of ftp dataset dir 
-        #print "ftp ", self.ftp.pwd()
-               
-
-              
          
         print "======================================================="
         print "Summary for " + datasetName
@@ -91,11 +71,8 @@ class DataGetter:
             if makedir:
                if(not os.path.exists(dirName)):
                   os.mkdir(dirName)
-               #print os.path.exists(dirName), dirName
                os.chdir(dirName)  # go to "year"/"month" dir
-               #print os.getcwd()
             self.ftp.cwd(dirName)
-            #print "ftp ", self.ftp.pwd()
             lineList = []
             self.ftp.retrlines("LIST", lineList.append)
             return lineList 
@@ -105,8 +82,7 @@ class DataGetter:
             try:    
                 line = fileLine[(fileLine.rindex(" ") + 1):]
                 filename = line.split(" ")[-1]
-                if filename[-3:]=="nc4":
-                   #self.fileList.append(filename)
+                if filename[-7:]==".dat.gz":
                    self.doFile(baseDir, filename)    
             except ValueError:
                 pass
@@ -149,7 +125,6 @@ class DataGetter:
     def downloadFile(self, filename, isUpdate):
         newFile = None
         
-        #print filename
         newFile = open(filename, "wb")
         try:
             try:
@@ -171,5 +146,5 @@ class DataGetter:
 
 if __name__ == "__main__":
         getter = DataGetter()
-        getter.processDataset("00Z-23Z", "/g/data1/ua8/Download/GSMaP/raw/reanalysis_gauge/daily/00Z-23Z")
+        getter.processDataset("00Z-23Z", "/g/data1/ua8/Download/GSMaP/raw/reanalysis_gauge/daily/")
         getter.close()
