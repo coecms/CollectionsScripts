@@ -1,4 +1,14 @@
 #!/usr/bin/python
+#
+# This script downloads NOAA-OISST data from the NOAA ftp server eclipse.ncdc.noaa.gov
+# used on raijin
+# uses ftplib module to connect and
+# hashlib module to calculate checksum
+# Author: Paola Petrelli paola.petrelli@utas.edu.au
+# Last modified date:
+#      2017-01-04 
+#      2017-03-03 changed the filter for files to include both ".nc.gz" and ".nc"
+
 from ftplib import FTP
 import os, time
 import zipfile
@@ -25,25 +35,19 @@ class DataGetter:
         self.remoteDir = "/pub/OI-daily-v2/NetCDF/"
         print "Processing dataset..." + datasetName
         os.chdir(self.localDir + datasetName + "/raw")   # go to dataset dir
-        #print os.getcwd()
         self.ftp.cwd(self.remoteDir) # got to ftp dataset dir 
-        #print "ftp ", self.ftp.pwd()
         self.ftp.retrlines("LIST", self.yearList.append)
         for year in self.yearList:
              print year[-4:]
-             if year[-4:-3]=="2":
+             if year[-4:]=="2017":
                  fileList = self.doDirectory(year,datasetName,True)
                  baseDir = os.getcwd()
                  for f in fileList:
                      self.handleFile(baseDir, f)
                  self.ftp.cwd("../../")  # get out of ftp year dir
-                 #print "ftp ", self.ftp.pwd()
                  os.chdir("../")     #get out of local year dir
-                 #print os.getcwd()
         os.chdir("../../")   # get out of local dataset dir
-        #print os.getcwd()
         self.ftp.cwd("../")  # get out of ftp dataset dir 
-        #print "ftp ", self.ftp.pwd()
                
 
               
@@ -69,11 +73,8 @@ class DataGetter:
             if makedir:
                if(not os.path.exists(dirName)):
                   os.mkdir(dirName)
-               #print os.path.exists(dirName), dirName
                os.chdir(dirName)  # go to "year"/"month" dir
-               #print os.getcwd()
             self.ftp.cwd(dirName+"/"+datasetName)
-            #print "ftp ", self.ftp.pwd()
             lineList = []
             self.ftp.retrlines("LIST", lineList.append)
             return lineList 
@@ -83,8 +84,7 @@ class DataGetter:
             try:    
                 line = fileLine[(fileLine.rindex(" ") + 1):]
                 filename = line.split(" ")[-1]
-                if filename[-5:]=="nc.gz":
-                   #self.fileList.append(filename)
+                if ".nc" in filename[-6:]:
                    self.doFile(baseDir, filename)    
             except ValueError:
                 pass
@@ -127,14 +127,13 @@ class DataGetter:
     def downloadFile(self, filename, isUpdate):
         newFile = None
         
-        #print filename
         newFile = open(filename, "wb")
         try:
             try:
                 print "Trying to download file... " + filename
                 self.ftp.retrbinary("RETR %s" % filename, newFile.write)
                 os.popen("chmod g+rxX " + filename).readline() 
-                os.popen("chgrp rr7 " + filename).readline() 
+                os.popen("chgrp ua8 " + filename).readline() 
                 return True
             except Exception, e:
                 self.errorFiles.append(filename + " could not be downloaded:")

@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # This script downloads GSMaP data from the JAXA ftp server hokusai.eorc.jaxa.jp
 # used on raijin
+# uses ftplib module to connect and
+# hashlib module to calculate checksum
 # Author: Paola Petrelli paola.petrelli@utas.edu.au
 # Last modified date: 
 #              2017-03-01
