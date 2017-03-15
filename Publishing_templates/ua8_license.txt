@@ -1,0 +1,31 @@
+Licenses for datasets in ARC Centre of Excellence fo Climate System Science data collection:
+
+
+Licensor - ARC Centre of Excellence for Climate System Science (ARCCSS) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail coecss@unsw.edu.au
+
+ACCESS1-3b_AMZDEF v1-0 and v2-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+CMS_TROPAC01_LeeuwinCurrent v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+EmCEI v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+EmCEI-CMIP5 v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+LGMc13 v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+WRF_Sydney2k v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+DOLCE v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+MCASClimate v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+Mk3L-LGM v1-0
+http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
