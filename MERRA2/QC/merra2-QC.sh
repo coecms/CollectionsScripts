@@ -8,11 +8,11 @@
 ROOT_DIR="/g/data1/rr7/MERRA2/raw/"
 cd $ROOT_DIR
 # dataset products
-prod_list=("M2I6NPANA.5.12.4" "M2T1NXFLX.5.12.4" "M2T1NXINT.5.12.4" "M2T1NXRAD.5.12.4" "M2T1NXSLV.5.12.4")
+prod_list=("M2I3NPASM.5.12.4" "M2I6NPANA.5.12.4" "M2T1NXFLX.5.12.4" "M2T1NXINT.5.12.4" "M2T1NXRAD.5.12.4" "M2T1NXSLV.5.12.4")
 # file minimum size  from for each dataset product
-prod_minsize=(520000000 380000000 1280000000 210000000 400000000)
+prod_minsize=(1150000000 520000000 380000000 1280000000 210000000 400000000)
 # goldsmr# server number to download from for each dataset product
-prod_num=(5 4 4 4 4) 
+prod_num=(5 5 4 4 4 4) 
 for i in ${!prod_list[@]}; do
    cd ${prod_list[$i]} 
    pwd
