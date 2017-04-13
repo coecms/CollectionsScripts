@@ -1,0 +1,624 @@
+&parameter
+param = 51.162
+out_name =sz
+long_name = "Surface geopotential "
+units = "m2 s-2"
+/
+&parameter
+param = 52.162
+out_name =sp
+long_name = "Surface pressure "
+units = "Pa"
+/
+&parameter
+param = 53.162
+out_name =vima
+long_name = "Vertical integral of mass of atmosphere "
+units = "kg m-2"
+/
+&parameter
+param = 54.162
+out_name =vit
+long_name = "Vertical integral of temperature "
+units = "K kg m-2"
+/
+&parameter
+param = 55.162
+out_name =vitcwv
+long_name = "Vertical integral of total column water vapour "
+units = "kg m-2"
+/
+&parameter
+param = 56.162
+out_name =vitclcw
+long_name = "Vertical integral of total column liquid cloud water "
+units = "kg m-2"
+/
+&parameter
+param = 57.162
+out_name =vitcfcw
+long_name = "Vertical integral of total column frozen cloud water"
+units = "kg m-2"
+/
+&parameter
+param = 58.162
+out_name =vitco3
+long_name = "Vertical integral of total column ozone "
+units = "kg m-2"
+/
+&parameter
+param = 59.162
+out_name =vike
+long_name = "Vertical integral of kinetic energy "
+units = "J m-2"
+/
+&parameter
+param = 60.162
+out_name =vite
+long_name = "Vertical integral of thermal energy "
+units = "J m-2"
+/
+&parameter
+param = 61.162
+out_name =vidse
+long_name = "Vertical integral of dry static energy "
+units = "J m-2"
+/
+&parameter
+param = 62.162
+out_name =vimse
+long_name = "Vertical integral of moist static energy "
+units = "J m-2}"
+/
+&parameter
+param = 63.162
+out_name =vitote
+long_name = "Vertical integral of total energy "
+units = "J m-2"
+/
+&parameter
+param = 64.162
+out_name =viec
+long_name = "Vertical integral of energy conversion "
+units = "W m-2"
+/
+&parameter
+param = 65.162
+out_name =viemf
+long_name = "Vertical integral of eastward mass flux "
+units = "kg m-1 s-1"
+/
+&parameter
+param = 66.162
+out_name =vinmf
+long_name = "Vertical integral of northward mass flux "
+units = "kg m-1 s-1"
+/
+&parameter
+param = 67.162
+out_name =viekef
+long_name = "Vertical integral of eastward kinetic energy flux "
+units = "W m-2"
+/
+&parameter
+param = 68.162
+out_name =vinkef
+long_name = "Vertical integral of northward kinetic energy flux "
+units = "W m-2"
+/
+&parameter
+param = 69.162
+out_name =viehf
+long_name = "Vertical integral of eastward heat flux "
+units = "W m-2"
+/
+&parameter
+param = 70.162
+out_name =vinhf
+long_name = "Vertical integral of northward heat flux "
+units = "W m-2"
+/
+&parameter
+param = 71.162
+out_name =viewvf
+long_name = "Vertical integral of eastward water vapour flux "
+units = "kg m-1 s-1"
+/
+&parameter
+param = 72.162
+out_name =vinwvf
+long_name = "Vertical integral of northward water vapour flux "
+units = "kg m-1 s-1"
+/
+&parameter
+param = 73.162
+out_name =viegf
+long_name = "Vertical integral of eastward geopotential flux "
+units = "W m-2"
+/
+&parameter
+param = 74.162
+out_name =vingf
+long_name = "Vertical integral of northward geopotential flux "
+units = "W m-2"
+/
+&parameter
+param = 75.162
+out_name =vietef
+long_name = "Vertical integral of eastward total energy flux "
+units = "W m-2"
+/
+&parameter
+param = 76.162
+out_name =vintef
+long_name = "Vertical integral of northward total energy flux "
+units = "W m-2"
+/
+&parameter
+param = 77.162
+out_name =vieo3f
+long_name = "Vertical integral of eastward ozone flux "
+units = "kg m-1 s-1"
+/
+&parameter
+param = 78.162
+out_name =vino3f
+long_name = "Vertical integral of northward ozone flux "
+units = "kg m-1 s-1"
+/
+&parameter
+param = 81.162
+out_name =vidmf
+long_name = "Vertical integral of divergence of mass flux "
+units = "kg m-2 s-1"
+/
+&parameter
+param = 82.162
+out_name =vidkef
+long_name = "Vertical integral of divergence of kinetic energy flux "
+units = "W m-2"
+/
+&parameter
+param = 83.162
+out_name =vidtef
+long_name = "Vertical integral of divergence of thermal energy flux "
+units = "W m-2"
+/
+&parameter
+param = 84.162
+out_name =vidmof
+long_name = "Vertical integral of divergence of moisture flux "
+units = "kg m-2 s-1"
+/
+&parameter
+param = 85.162
+out_name =vidgf
+long_name = "Vertical integral of divergence of geopotential flux "
+units = "W m-2"
+/
+&parameter
+param = 86.162
+out_name =vidtotef
+long_name = "Vertical integral of divergence of total energy flux "
+units = "W m-2"
+/
+&parameter
+param = 87.162
+out_name =vido3f
+long_name = "Vertical integral of divergence of ozone flux "
+units = "kg m-2 s-1"
+/
+&parameter
+param = 100.162
+out_name =tswr
+long_name = "Tendency of shortwave radiation "
+units = "K"
+/
+&parameter
+param = 101.162
+out_name =tlwr
+long_name = "Tendency of longwave radiation "
+units = "K"
+/
+&parameter
+param = 102.162
+out_name =tcsswf
+long_name = "Tendency of clear sky shortwave radiation "
+units = "K"
+/
+&parameter
+param = 103.162
+out_name =tcslwr
+long_name = "Tendency of clear sky longwave radiation "
+units = "K"
+/
+&parameter
+param = 104.162
+out_name =umf
+long_name = "Updraught mass flux "
+units = "kg m-2"
+/
+&parameter
+param = 105.162
+out_name =dmf
+long_name = "Downdraught mass flux "
+units = "kg m-2"
+/
+&parameter
+param = 106.162
+out_name =udr
+long_name = "Updraught detrainment rate "
+units = "s m-1"
+/
+&parameter
+param = 107.162
+out_name =ddr
+long_name = "Downdraught detrainment rate "
+units = "s m-1"
+/
+&parameter
+param = 108.162
+out_name =tpf
+long_name = "Total precipitation flux "
+units = "kg m-2"
+/
+&parameter
+param = 109.162
+out_name =tdcfh
+long_name = "Turbulent diffusion coefficient for heat "
+units = "m2"
+/
+&parameter
+param = 110.162
+out_name =tt
+long_name = "Tendency of temperature "
+units = "K"
+/
+&parameter
+param = 111.162
+out_name =tq
+long_name = "Tendency of specific humidity "
+units = "1"
+/
+&parameter
+param = 112.162
+out_name =tuc
+long_name = "Tendency of u component "
+units = "m s-1"
+/
+&parameter
+param = 113.162
+out_name =tvc
+long_name = "Tendency of v component "
+units = "m s-1"
+/
+&parameter
+param = 114.162
+out_name =utendd
+long_name = "U-tendency from dynamics "
+units = "m s-1"
+/
+&parameter
+param = 115.162
+out_name =vtendd
+long_name = "V-tendency from dynamics "
+units = "m s-1"
+/
+&parameter
+param = 116.162
+out_name =ttendd
+long_name = "T-tendency from dynamics "
+units = "K"
+/
+&parameter
+param = 117.162
+out_name =qtendd
+long_name = "q-tendency from dynamics "
+units = "1"
+/
+&parameter
+param = 118.162
+out_name =ttendr
+long_name = "T-tendency from radiation "
+units = "K"
+/
+&parameter
+param = 119.162
+out_name =utendts
+long_name = "U-tendency from turbulent diffusion + subgrid orography "
+units = "m s-1"
+/
+&parameter
+param = 120.162
+out_name =vtendts
+long_name = "V-tendency from turbulent diffusion + subgrid orography "
+units = "m s-1"
+/
+&parameter
+param = 121.162
+out_name =ttendts
+long_name = "T-tendency from turbulent diffusion + subgrid orography "
+units = "K"
+/
+&parameter
+param = 122.162
+out_name =qtendt
+long_name = "q-tendency from turbulent diffusion "
+units = "1"
+/
+&parameter
+param = 123.162
+out_name =utends
+long_name = "U-tendency from subgrid orography "
+units = "m s-1"
+/
+&parameter
+param = 124.162
+out_name =vtends
+long_name = "V-tendency from subgrid orography "
+units = "m s-1"
+/
+&parameter
+param = 125.162
+out_name =ttends
+long_name = "T-tendency from subgrid orography "
+units = "K"
+/
+&parameter
+param = 126.162
+out_name =utendcds
+long_name = "U-tendency from convection (deep+shallow) "
+units = "m s-1"
+/
+&parameter
+param = 127.162
+out_name =vtendcds
+long_name = "V-tendency from convection (deep+shallow) "
+units = "m s-1"
+/
+&parameter
+param = 128.162
+out_name =ttendcds
+long_name = "T-tendency from convection (deep+shallow) "
+units = "K"
+/
+&parameter
+param = 129.162
+out_name =qtendcds
+long_name = "q-tendency from convection (deep+shallow) "
+units = "kg kg-1"
+/
+&parameter
+param = 130.162
+out_name =lpc
+long_name = "Liquid Precipitation flux from convection "
+units = "kg m-2"
+/
+&parameter
+param = 131.162
+out_name =ipc
+long_name = "Ice Precipitation flux from convection "
+units = "kg m-2"
+/
+&parameter
+param = 132.162
+out_name =ttendcs
+long_name = "T-tendency from cloud scheme "
+units = "K"
+/
+&parameter
+param = 133.162
+out_name =qtendcs
+long_name = "q-tendency from cloud scheme "
+units = "kg kg-1"
+/
+&parameter
+param = 134.162
+out_name =qltendcs
+long_name = "ql-tendency from cloud scheme "
+units = "kg kg-1"
+/
+&parameter
+param = 135.162
+out_name =qitendcs
+long_name = "qi-tendency from cloud scheme "
+units = "kg kg-1"
+/
+&parameter
+param = 136.162
+out_name =lpcs
+long_name = "Liquid Precip flux from cloud scheme (stratiform) "
+units = "kg m-2"
+/
+&parameter
+param = 137.162
+out_name =ipcs
+long_name = "Ice Precip flux from cloud scheme (stratiform) "
+units = "kg m-2"
+/
+&parameter
+param = 138.162
+out_name =utendsc
+long_name = "U-tendency from shallow convection "
+units = "m s-1"
+/
+&parameter
+param = 139.162
+out_name =vtendsc
+long_name = "V-tendency from shallow convection "
+units = "m s-1"
+/
+&parameter
+param = 140.162
+out_name =ttendsc
+long_name = "T-tendency from shallow convection "
+units = "K"
+/
+&parameter
+param = 141.162
+out_name =qtendsc
+long_name = "q-tendency from shallow convection "
+units = "1"
+/
+&parameter
+param = 206.162
+out_name =vg
+long_name = "Variance of geopotential "
+units = "m4 s-4"
+/
+&parameter
+param = 207.162
+out_name =cg
+long_name = "Covariance of geopotential/temperature "
+units = "m2 K s-2"
+/
+&parameter
+param = 208.162
+out_name =vt
+long_name = "Variance of temperature "
+units = "K2"
+/
+&parameter
+param = 209.162
+out_name =cgq
+long_name = "Covariance of geopotential/specific humidity "
+units = "m2 s-2"
+/
+&parameter
+param = 210.162
+out_name =ctq
+long_name = "Covariance of temperature/specific humidity "
+units = "K"
+/
+&parameter
+param = 211.162
+out_name =vq
+long_name = "Variance of specific humidity "
+units = "1"
+/
+&parameter
+param = 212.162
+out_name =cuz
+long_name = "Covariance of u component/geopotential "
+units = "m3 s-3"
+/
+&parameter
+param = 213.162
+out_name =cut
+long_name = "Covariance of u component/temperature "
+units = "m s-1 K"
+/
+&parameter
+param = 214.162
+out_name =cuq
+long_name = "Covariance of u component/specific humidity "
+units = "m s-1"
+/
+&parameter
+param = 215.162
+out_name =vu
+long_name = "Variance of u component "
+units = "m2 s-2"
+/
+&parameter
+param = 216.162
+out_name =cvz
+long_name = "Covariance of v component/geopotential "
+units = "m3 s-3"
+/
+&parameter
+param = 217.162
+out_name =cvt
+long_name = "Covariance of v component/temperature "
+units = "m s-1 K"
+/
+&parameter
+param = 218.162
+out_name =cvq
+long_name = "Covariance of v component/specific humidity "
+units = "m s-1"
+/
+&parameter
+param = 219.162
+out_name =cvu
+long_name = "Covariance of v component/u component "
+units = "m2 s-2"
+/
+&parameter
+param = 220.162
+out_name =vv
+long_name = "Variance of v component "
+units = "m2 s-2"
+/
+&parameter
+param = 221.162
+out_name =coz
+long_name = "Covariance of omega/geopotential "
+units = "m2 Pa s-3"
+/
+&parameter
+param = 222.162
+out_name =cot
+long_name = "Covariance of omega/temperature "
+units = "Pa s-1 K"
+/
+&parameter
+param = 223.162
+out_name =coq
+long_name = "Covariance of omega/specific humidity "
+units = "Pa s-1"
+/
+&parameter
+param = 224.162
+out_name =cou
+long_name = "Covariance of omega/u component "
+units = "m Pa s-2"
+/
+&parameter
+param = 225.162
+out_name =cov
+long_name = "Covariance of omega/v component "
+units = "m Pa s-2"
+/
+&parameter
+param = 226.162
+out_name =vo
+long_name = "Variance of omega "
+units = "Pa2 s-2"
+/
+&parameter
+param = 227.162
+out_name =vsp
+long_name = "Variance of surface pressure "
+units = "Pa2"
+/
+&parameter
+param = 229.162
+out_name =vrh
+long_name = "Variance of relative humidity "
+units = "1"
+/
+&parameter
+param = 230.162
+out_name =cuo3
+long_name = "Covariance of u component/ozone "
+units = "m s-1"
+/
+&parameter
+param = 231.162
+out_name =cvo3
+long_name = "Covariance of v component/ozone "
+units = "m s-1"
+/
+&parameter
+param = 232.162
+out_name =coo3
+long_name = "Covariance of omega/ozone "
+units = "Pa s-1"
+/
+&parameter
+param = 233.162
+out_name =vo3
+long_name = "Variance of ozone "
+units = "1"
+/

@@ -1,0 +1,938 @@
+(dp0
+S'COQ'
+p1
+(lp2
+S'223'
+p3
+aS'Covariance of omega/specific humidity [Pa s-1]'
+p4
+aS'coq'
+p5
+asS'VIMA'
+p6
+(lp7
+S'53'
+p8
+aS'Vertical integral of mass of atmosphere [kg m-2]'
+p9
+aS'vima'
+p10
+asS'COU'
+p11
+(lp12
+S'224'
+p13
+aS'Covariance of omega/u component [m Pa s-2]'
+p14
+aS'cou'
+p15
+asS'CTQ'
+p16
+(lp17
+S'210'
+p18
+aS'Covariance of temperature/specific humidity [K]'
+p19
+aS'ctq'
+p20
+asS'COV'
+p21
+(lp22
+S'225'
+p23
+aS'Covariance of omega/v component [m Pa s-2]'
+p24
+aS'cov'
+p25
+asS'COZ'
+p26
+(lp27
+S'221'
+p28
+aS'Covariance of omega/geopotential [m2 Pa s-3]'
+p29
+aS'coz'
+p30
+asS'VITCFCW'
+p31
+(lp32
+S'57'
+p33
+aS'Vertical integral of total column frozen cloud water[kg m-2]'
+p34
+aS'vitcfcw'
+p35
+asS'TDCFH'
+p36
+(lp37
+S'109'
+p38
+aS'Turbulent diffusion coefficient for heat [m2]'
+p39
+aS'tdcfh'
+p40
+asS'UMF'
+p41
+(lp42
+S'104'
+p43
+aS'Updraught mass flux [kg m-2]'
+p44
+aS'umf'
+p45
+asS'VTENDTS'
+p46
+(lp47
+S'120'
+p48
+aS'V-tendency from turbulent diffusion + subgrid orography [m s-1]'
+p49
+aS'vtendts'
+p50
+asS'TSWR'
+p51
+(lp52
+S'100'
+p53
+aS'Tendency of shortwave radiation [K]'
+p54
+aS'tswr'
+p55
+asS'CVZ'
+p56
+(lp57
+S'216'
+p58
+aS'Covariance of v component/geopotential [m3 s-3]'
+p59
+aS'cvz'
+p60
+asS'SP'
+p61
+(lp62
+S'52'
+p63
+aS'Surface pressure [Pa]'
+p64
+aS'sp'
+p65
+asS'VINGF'
+p66
+(lp67
+S'74'
+p68
+aS'Vertical integral of northward geopotential flux [W m-2]'
+p69
+aS'vingf'
+p70
+asS'TTENDSC'
+p71
+(lp72
+S'140'
+p73
+aS'T-tendency from shallow convection [K]'
+p74
+aS'ttendsc'
+p75
+asS'COT'
+p76
+(lp77
+S'222'
+p78
+aS'Covariance of omega/temperature [Pa s-1 K]'
+p79
+aS'cot'
+p80
+asS'VIEMF'
+p81
+(lp82
+S'65'
+p83
+aS'Vertical integral of eastward mass flux [kg m-1 s-1]'
+p84
+aS'viemf'
+p85
+asS'VIDTOTEF'
+p86
+(lp87
+S'86'
+p88
+aS'Vertical integral of divergence of total energy flux [W m-2]'
+p89
+aS'vidtotef'
+p90
+asS'VTENDS'
+p91
+(lp92
+S'124'
+p93
+aS'V-tendency from subgrid orography [m s-1]'
+p94
+aS'vtends'
+p95
+asS'VITOTE'
+p96
+(lp97
+S'63'
+p98
+aS'Vertical integral of total energy [J m-2]'
+p99
+aS'vitote'
+p100
+asS'QTENDCDS'
+p101
+(lp102
+S'129'
+p103
+aS'q-tendency from convection (deep+shallow) [kg kg-1]'
+p104
+aS'qtendcds'
+p105
+asS'CGQ'
+p106
+(lp107
+S'209'
+p108
+aS'Covariance of geopotential/specific humidity [m2 s-2]'
+p109
+aS'cgq'
+p110
+asS'UTENDCDS'
+p111
+(lp112
+S'126'
+p113
+aS'U-tendency from convection (deep+shallow) [m s-1]'
+p114
+aS'utendcds'
+p115
+asS'VIDGF'
+p116
+(lp117
+S'85'
+p118
+aS'Vertical integral of divergence of geopotential flux [W m-2]'
+p119
+aS'vidgf'
+p120
+asS'VTENDD'
+p121
+(lp122
+S'115'
+p123
+aS'V-tendency from dynamics [m s-1]'
+p124
+aS'vtendd'
+p125
+asS'TVC'
+p126
+(lp127
+S'113'
+p128
+aS'Tendency of v component [m s-1]'
+p129
+aS'tvc'
+p130
+asS'TPF'
+p131
+(lp132
+S'108'
+p133
+aS'Total precipitation flux [kg m-2]'
+p134
+aS'tpf'
+p135
+asS'VIEGF'
+p136
+(lp137
+S'73'
+p138
+aS'Vertical integral of eastward geopotential flux [W m-2]'
+p139
+aS'viegf'
+p140
+asS'CUT'
+p141
+(lp142
+S'213'
+p143
+aS'Covariance of u component/temperature [m s-1 K]'
+p144
+aS'cut'
+p145
+asS'VINKEF'
+p146
+(lp147
+S'68'
+p148
+aS'Vertical integral of northward kinetic energy flux [W m-2]'
+p149
+aS'vinkef'
+p150
+asS'CUQ'
+p151
+(lp152
+S'214'
+p153
+aS'Covariance of u component/specific humidity [m s-1]'
+p154
+aS'cuq'
+p155
+asS'SZ'
+p156
+(lp157
+S'51'
+p158
+aS'Surface geopotential [m2 s-2]'
+p159
+aS'sz'
+p160
+asS'VINHF'
+p161
+(lp162
+S'70'
+p163
+aS'Vertical integral of northward heat flux [W m-2]'
+p164
+aS'vinhf'
+p165
+asS'CUZ'
+p166
+(lp167
+S'212'
+p168
+aS'Covariance of u component/geopotential [m3 s-3]'
+p169
+aS'cuz'
+p170
+asS'VIEO3F'
+p171
+(lp172
+S'77'
+p173
+aS'Vertical integral of eastward ozone flux [kg m-1 s-1]'
+p174
+aS'vieo3f'
+p175
+asS'VIEKEF'
+p176
+(lp177
+S'67'
+p178
+aS'Vertical integral of eastward kinetic energy flux [W m-2]'
+p179
+aS'viekef'
+p180
+asS'VITCWV'
+p181
+(lp182
+S'55'
+p183
+aS'Vertical integral of total column water vapour [kg m-2]'
+p184
+aS'vitcwv'
+p185
+asS'CVQ'
+p186
+(lp187
+S'218'
+p188
+aS'Covariance of v component/specific humidity [m s-1]'
+p189
+aS'cvq'
+p190
+asS'LPC'
+p191
+(lp192
+S'130'
+p193
+aS'Liquid Precipitation flux from convection [kg m-2]'
+p194
+aS'lpc'
+p195
+asS'QLTENDCS'
+p196
+(lp197
+S'134'
+p198
+aS'ql-tendency from cloud scheme [kg kg-1]'
+p199
+aS'qltendcs'
+p200
+asS'CVT'
+p201
+(lp202
+S'217'
+p203
+aS'Covariance of v component/temperature [m s-1 K]'
+p204
+aS'cvt'
+p205
+asS'TTENDTS'
+p206
+(lp207
+S'121'
+p208
+aS'T-tendency from turbulent diffusion + subgrid orography [K]'
+p209
+aS'ttendts'
+p210
+asS'IPC'
+p211
+(lp212
+S'131'
+p213
+aS'Ice Precipitation flux from convection [kg m-2]'
+p214
+aS'ipc'
+p215
+asS'UTENDTS'
+p216
+(lp217
+S'119'
+p218
+aS'U-tendency from turbulent diffusion + subgrid orography [m s-1]'
+p219
+aS'utendts'
+p220
+asS'VRH'
+p221
+(lp222
+S'229'
+p223
+aS'Variance of relative humidity [1]'
+p224
+aS'vrh'
+p225
+asS'VITCO3'
+p226
+(lp227
+S'58'
+p228
+aS'Vertical integral of total column ozone [kg m-2]'
+p229
+aS'vitco3'
+p230
+asS'CG'
+p231
+(lp232
+S'207'
+p233
+aS'Covariance of geopotential/temperature [m2 K s-2]'
+p234
+aS'cg'
+p235
+asS'VIEC'
+p236
+(lp237
+S'64'
+p238
+aS'Vertical integral of energy conversion [W m-2]'
+p239
+aS'viec'
+p240
+asS'VIEHF'
+p241
+(lp242
+S'69'
+p243
+aS'Vertical integral of eastward heat flux [W m-2]'
+p244
+aS'viehf'
+p245
+asS'VITCLCW'
+p246
+(lp247
+S'56'
+p248
+aS'Vertical integral of total column liquid cloud water [kg m-2]'
+p249
+aS'vitclcw'
+p250
+asS'QITENDCS'
+p251
+(lp252
+S'135'
+p253
+aS'qi-tendency from cloud scheme [kg kg-1]'
+p254
+aS'qitendcs'
+p255
+asS'VIT'
+p256
+(lp257
+S'54'
+p258
+aS'Vertical integral of temperature [K kg m-2]'
+p259
+aS'vit'
+p260
+asS'TUC'
+p261
+(lp262
+S'112'
+p263
+aS'Tendency of u component [m s-1]'
+p264
+aS'tuc'
+p265
+asS'CVU'
+p266
+(lp267
+S'219'
+p268
+aS'Covariance of v component/u component [m2 s-2]'
+p269
+aS'cvu'
+p270
+asS'TTENDCS'
+p271
+(lp272
+S'132'
+p273
+aS'T-tendency from cloud scheme [K]'
+p274
+aS'ttendcs'
+p275
+asS'VINMF'
+p276
+(lp277
+S'66'
+p278
+aS'Vertical integral of northward mass flux [kg m-1 s-1]'
+p279
+aS'vinmf'
+p280
+asS'UTENDD'
+p281
+(lp282
+S'114'
+p283
+aS'U-tendency from dynamics [m s-1]'
+p284
+aS'utendd'
+p285
+asS'VSP'
+p286
+(lp287
+S'227'
+p288
+aS'Variance of surface pressure [Pa2]'
+p289
+aS'vsp'
+p290
+asS'DMF'
+p291
+(lp292
+S'105'
+p293
+aS'Downdraught mass flux [kg m-2]'
+p294
+aS'dmf'
+p295
+asS'VIETEF'
+p296
+(lp297
+S'75'
+p298
+aS'Vertical integral of eastward total energy flux [W m-2]'
+p299
+aS'vietef'
+p300
+asS'LPCS'
+p301
+(lp302
+S'136'
+p303
+aS'Liquid Precip flux from cloud scheme (stratiform) [kg m-2]'
+p304
+aS'lpcs'
+p305
+asS'VTENDCDS'
+p306
+(lp307
+S'127'
+p308
+aS'V-tendency from convection (deep+shallow) [m s-1]'
+p309
+aS'vtendcds'
+p310
+asS'TTENDD'
+p311
+(lp312
+S'116'
+p313
+aS'T-tendency from dynamics [K]'
+p314
+aS'ttendd'
+p315
+asS'TTENDCDS'
+p316
+(lp317
+S'128'
+p318
+aS'T-tendency from convection (deep+shallow) [K]'
+p319
+aS'ttendcds'
+p320
+asS'UTENDS'
+p321
+(lp322
+S'123'
+p323
+aS'U-tendency from subgrid orography [m s-1]'
+p324
+aS'utends'
+p325
+asS'TCSSWF'
+p326
+(lp327
+S'102'
+p328
+aS'Tendency of clear sky shortwave radiation [K]'
+p329
+aS'tcsswf'
+p330
+asS'VO3'
+p331
+(lp332
+S'233'
+p333
+aS'Variance of ozone [1]'
+p334
+aS'vo3'
+p335
+asS'TTENDS'
+p336
+(lp337
+S'125'
+p338
+aS'T-tendency from subgrid orography [K]'
+p339
+aS'ttends'
+p340
+asS'TTENDR'
+p341
+(lp342
+S'118'
+p343
+aS'T-tendency from radiation [K]'
+p344
+aS'ttendr'
+p345
+asS'TCSLWR'
+p346
+(lp347
+S'103'
+p348
+aS'Tendency of clear sky longwave radiation [K]'
+p349
+aS'tcslwr'
+p350
+asS'QTENDCS'
+p351
+(lp352
+S'133'
+p353
+aS'q-tendency from cloud scheme [kg kg-1]'
+p354
+aS'qtendcs'
+p355
+asS'COO3'
+p356
+(lp357
+S'232'
+p358
+aS'Covariance of omega/ozone [Pa s-1]'
+p359
+aS'coo3'
+p360
+asS'VIDMF'
+p361
+(lp362
+S'81'
+p363
+aS'Vertical integral of divergence of mass flux [kg m-2 s-1]'
+p364
+aS'vidmf'
+p365
+asS'TT'
+p366
+(lp367
+S'110'
+p368
+aS'Tendency of temperature [K]'
+p369
+aS'tt'
+p370
+asS'TQ'
+p371
+(lp372
+S'111'
+p373
+aS'Tendency of specific humidity [1]'
+p374
+aS'tq'
+p375
+asS'VINWVF'
+p376
+(lp377
+S'72'
+p378
+aS'Vertical integral of northward water vapour flux [kg m-1 s-1]'
+p379
+aS'vinwvf'
+p380
+asS'VIEWVF'
+p381
+(lp382
+S'71'
+p383
+aS'Vertical integral of eastward water vapour flux [kg m-1 s-1]'
+p384
+aS'viewvf'
+p385
+asS'UTENDSC'
+p386
+(lp387
+S'138'
+p388
+aS'U-tendency from shallow convection [m s-1]'
+p389
+aS'utendsc'
+p390
+asS'VTENDSC'
+p391
+(lp392
+S'139'
+p393
+aS'V-tendency from shallow convection [m s-1]'
+p394
+aS'vtendsc'
+p395
+asS'TLWR'
+p396
+(lp397
+S'101'
+p398
+aS'Tendency of longwave radiation [K]'
+p399
+aS'tlwr'
+p400
+asS'VG'
+p401
+(lp402
+S'206'
+p403
+aS'Variance of geopotential [m4 s-4]'
+p404
+aS'vg'
+p405
+asS'QTENDT'
+p406
+(lp407
+S'122'
+p408
+aS'q-tendency from turbulent diffusion [1]'
+p409
+aS'qtendt'
+p410
+asS'DDR'
+p411
+(lp412
+S'107'
+p413
+aS'Downdraught detrainment rate [s m-1]'
+p414
+aS'ddr'
+p415
+asS'VO'
+p416
+(lp417
+S'226'
+p418
+aS'Variance of omega [Pa2 s-2]'
+p419
+aS'vo'
+p420
+asS'VQ'
+p421
+(lp422
+S'211'
+p423
+aS'Variance of specific humidity [1]'
+p424
+aS'vq'
+p425
+asS'VT'
+p426
+(lp427
+S'208'
+p428
+aS'Variance of temperature [K2]'
+p429
+aS'vt'
+p430
+asS'VU'
+p431
+(lp432
+S'215'
+p433
+aS'Variance of u component [m2 s-2]'
+p434
+aS'vu'
+p435
+asS'VV'
+p436
+(lp437
+S'220'
+p438
+aS'Variance of v component [m2 s-2]'
+p439
+aS'vv'
+p440
+asS'QTENDD'
+p441
+(lp442
+S'117'
+p443
+aS'q-tendency from dynamics [1]'
+p444
+aS'qtendd'
+p445
+asS'VIDTEF'
+p446
+(lp447
+S'83'
+p448
+aS'Vertical integral of divergence of thermal energy flux [W m-2]'
+p449
+aS'vidtef'
+p450
+asS'VITE'
+p451
+(lp452
+S'60'
+p453
+aS'Vertical integral of thermal energy [J m-2]'
+p454
+aS'vite'
+p455
+asS'QTENDSC'
+p456
+(lp457
+S'141'
+p458
+aS'q-tendency from shallow convection [1]'
+p459
+aS'qtendsc'
+p460
+asS'UDR'
+p461
+(lp462
+S'106'
+p463
+aS'Updraught detrainment rate [s m-1]'
+p464
+aS'udr'
+p465
+asS'VIDMOF'
+p466
+(lp467
+S'84'
+p468
+aS'Vertical integral of divergence of moisture flux [kg m-2 s-1]'
+p469
+aS'vidmof'
+p470
+asS'CUO3'
+p471
+(lp472
+S'230'
+p473
+aS'Covariance of u component/ozone [m s-1]'
+p474
+aS'cuo3'
+p475
+asS'VINO3F'
+p476
+(lp477
+S'78'
+p478
+aS'Vertical integral of northward ozone flux [kg m-1 s-1]'
+p479
+aS'vino3f'
+p480
+asS'VINTEF'
+p481
+(lp482
+S'76'
+p483
+aS'Vertical integral of northward total energy flux [W m-2]'
+p484
+aS'vintef'
+p485
+asS'CVO3'
+p486
+(lp487
+S'231'
+p488
+aS'Covariance of v component/ozone [m s-1]'
+p489
+aS'cvo3'
+p490
+asS'VIMSE'
+p491
+(lp492
+S'62'
+p493
+aS'Vertical integral of moist static energy [J m-2}'
+p494
+aS'vimse'
+p495
+asS'IPCS'
+p496
+(lp497
+S'137'
+p498
+aS'Ice Precip flux from cloud scheme (stratiform) [kg m-2]'
+p499
+aS'ipcs'
+p500
+asS'VIDSE'
+p501
+(lp502
+S'61'
+p503
+aS'Vertical integral of dry static energy [J m-2]'
+p504
+aS'vidse'
+p505
+asS'VIDO3F'
+p506
+(lp507
+S'87'
+p508
+aS'Vertical integral of divergence of ozone flux [kg m-2 s-1]'
+p509
+aS'vido3f'
+p510
+asS'VIDKEF'
+p511
+(lp512
+S'82'
+p513
+aS'Vertical integral of divergence of kinetic energy flux [W m-2]'
+p514
+aS'vidkef'
+p515
+asS'VIKE'
+p516
+(lp517
+S'59'
+p518
+aS'Vertical integral of kinetic energy [J m-2]'
+p519
+aS'vike'
+p520
+as.

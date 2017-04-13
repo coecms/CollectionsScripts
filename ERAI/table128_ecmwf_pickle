@@ -1,0 +1,1583 @@
+(dp0
+S'TCLW'
+p1
+(lp2
+S'78'
+p3
+aS'Total column liquid water [kg m**-2]'
+p4
+aS'tclw'
+p5
+asS'VIMD'
+p6
+(lp7
+S'213'
+p8
+aS'Vertically integrated moisture divergence [kg m**-2]'
+p9
+aS'vimd'
+p10
+asS'PAW'
+p11
+(lp12
+S'204'
+p13
+aS'Precipitation analysis weights []'
+p14
+aS''
+p15
+asS'STL4'
+p16
+(lp17
+S'236'
+p18
+aS'Soil temperature level 4 (100-289 cm) [K]'
+p19
+aS'stl4'
+p20
+asS'BV'
+p21
+(lp22
+S'128'
+p23
+aS'Budget values[]'
+p24
+ag15
+asS'WS'
+p25
+(lp26
+S'10'
+p27
+aS'Wind speed [m s**-1]'
+p28
+aS'wind'
+p29
+asS'SCFR'
+p30
+(lp31
+S'7'
+p32
+aS'Soil clay fraction [0-1]'
+p33
+aS'ssfr'
+p34
+asS'STL3'
+p35
+(lp36
+S'183'
+p37
+aS'Soil temperature level 3 (28-100 cm) [K]'
+p38
+aS'stl3'
+p39
+asS'STL2'
+p40
+(lp41
+S'170'
+p42
+aS'Soil temperature level 2 (7-28cm) [K]'
+p43
+aS'stl2'
+p44
+asS'ATTE'
+p45
+(lp46
+S'251'
+p47
+aS'Adiabatic tendency of temperature [K]'
+p48
+aS'atte'
+p49
+asS'O3'
+p50
+(lp51
+S'203'
+p52
+aS'Ozone mass mixing ratio [kg kg**-1]'
+p53
+aS'tro3'
+p54
+asS'CCC'
+p55
+(lp56
+S'185'
+p57
+aS'Convective cloud cover [0-1]'
+p58
+aS'ccc'
+p59
+asS'SSHF'
+p60
+(lp61
+S'146'
+p62
+aS'Surface sensible heat flux [W m**-2 s]'
+p63
+aS'hfss'
+p64
+asS'SWL4'
+p65
+(lp66
+S'237'
+p67
+aS'Soil wetness level 4 (100-289 cm) [m]'
+p68
+aS'swl4'
+p69
+asS'Z'
+p70
+(lp71
+S'129'
+p72
+aS'Geopotential [m**2 s**-2]'
+p73
+aS'z'
+p74
+asS'SWL2'
+p75
+(lp76
+S'171'
+p77
+aS'Soil wetness level 2 (7-28cm) [m]'
+p78
+aS'swl2'
+p79
+asS'SWL3'
+p80
+(lp81
+S'184'
+p82
+aS'Soil wetness level 3 (28-100 cm) [m]'
+p83
+ag15
+asS'ATHE'
+p84
+(lp85
+S'252'
+p86
+aS'Adiabatic tendency of humidity [kg kg**-1]'
+p87
+aS'athe'
+p88
+asS'SWL1'
+p89
+(lp90
+S'140'
+p91
+aS'Soil wetness level 1 (0-7cm) [m]'
+p92
+aS'swl1'
+p93
+asS'DHLC'
+p94
+(lp95
+S'217'
+p96
+aS'Diabatic heating large-scale condensation [K]'
+p97
+aS'dhlc'
+p98
+asS'TCWV'
+p99
+(lp100
+S'137'
+p101
+aS'Total column water vapour [kg m**-2]'
+p102
+aS'prw'
+p103
+asS'MN2T24'
+p104
+(lp105
+S'52'
+p106
+aS'Minimum 2 metre temperature [K]'
+p107
+aS'tasmin'
+p108
+asS'MONT'
+p109
+(lp110
+S'53'
+p111
+aS'Montgomery potential [m**2 s**-2]'
+p112
+ag15
+asS'CTZW'
+p113
+(lp114
+S'222'
+p115
+aS'Convective tendency of zonal wind [m s**-1]'
+p116
+aS'ctzw'
+p117
+asS'TTRC'
+p118
+(lp119
+S'209'
+p120
+aS'Top net thermal radiation, clear sky [W m**-2]'
+p121
+aS'ttrc'
+p122
+asS'RO'
+p123
+(lp124
+S'205'
+p125
+aS'Runoff [m]'
+p126
+aS'ro'
+p127
+asS'SEPT'
+p128
+(lp129
+S'5'
+p130
+aS'Saturated equivalent potential temperature [K]'
+p131
+aS'sept'
+p132
+asS'VRTW'
+p133
+(lp134
+S'14'
+p135
+aS'V component of rotational wind [m s**-1]'
+p136
+aS'vrtw'
+p137
+asS'2T'
+p138
+(lp139
+S'167'
+p140
+aS'2 metre temperature [K]'
+p141
+aS'tas'
+p142
+asS'NSGD'
+p143
+(lp144
+S'221'
+p145
+aS'NS gravity wave drag tendency [m s**-1]'
+p146
+aS'nsgd'
+p147
+asS'D'
+p148
+(lp149
+S'155'
+p150
+aS'Divergence [s**-1]'
+p151
+aS'd'
+p152
+asS'EWOV'
+p153
+(lp154
+S'190'
+p155
+aS'EW component of subgrid orographic variance [m**2]'
+p156
+ag15
+asS'DHVD'
+p157
+(lp158
+S'215'
+p159
+aS'Diabatic heating by vertical diffusion [K]'
+p160
+aS'dhvd'
+p161
+asS'CLWC'
+p162
+(lp163
+S'246'
+p164
+aS'Cloud liquid water content [kg kg**-1]'
+p165
+aS'clw'
+p166
+asS'2D'
+p167
+(lp168
+S'168'
+p169
+aS'2 metre dewpoint temperature [K]'
+p170
+aS'ta2d'
+p171
+asS'MEAN2T24'
+p172
+(lp173
+S'55'
+p174
+aS'Mean 2 metre temperature [K]'
+p175
+aS'mean2t24'
+p176
+asS'EQPT'
+p177
+(lp178
+S'4'
+p179
+aS'Equivalent potential temperature [K]'
+p180
+aS'eqpt'
+p181
+asS'GH'
+p182
+(lp183
+S'156'
+p184
+aS'Height [m]'
+p185
+aS'zg'
+p186
+asS'CHNK'
+p187
+(lp188
+S'148'
+p189
+aS'Charnock[]'
+p190
+ag15
+asS'EWGD'
+p191
+(lp192
+S'220'
+p193
+aS'EW gravity wave drag tendency [m s**-1]'
+p194
+aS'ewgd'
+p195
+asS'SDUR'
+p196
+(lp197
+S'46'
+p198
+aS'Solar duration [s]'
+p199
+ag15
+asS'SNR'
+p200
+(lp201
+S'149'
+p202
+aS'Surface net radiation [W m**-2 s]'
+p203
+ag15
+asS'NSOV'
+p204
+(lp205
+S'191'
+p206
+aS'NS component of subgrid orographic variance [m**2]'
+p207
+ag15
+asS'STL1'
+p208
+(lp209
+S'139'
+p210
+aS'Soil temperature level 1 (0-7cm) [K]'
+p211
+aS'stl1'
+p212
+asS'NWOV'
+p213
+(lp214
+S'192'
+p215
+aS'NWSE component of subgrid orographic variance [m**2]'
+p216
+ag15
+asS'TSN'
+p217
+(lp218
+S'238'
+p219
+aS'Temperature of snow layer [K]'
+p220
+aS'tsn'
+p221
+asS'SKT'
+p222
+(lp223
+S'235'
+p224
+aS'Skin temperature [K]'
+p225
+aS'ts'
+p226
+asS'HTCC'
+p227
+(lp228
+S'225'
+p229
+aS'Humidity tendency by cumulus convection [kg kg**-1]'
+p230
+aS'htcc'
+p231
+asS'LNSP'
+p232
+(lp233
+S'152'
+p234
+aS'Logarithm of surface pressure[]'
+p235
+ag15
+asS'VDH'
+p236
+(lp237
+S'224'
+p238
+aS'Vertical diffusion of humidity [kg kg**-1]'
+p239
+aS'vdh'
+p240
+asS'TSR'
+p241
+(lp242
+S'178'
+p243
+aS'Top solar radiation [W m**-2 s]'
+p244
+aS'tsr'
+p245
+asS'TSP'
+p246
+(lp247
+S'158'
+p248
+aS'Tendency of surface pressure [Pa s**-1]'
+p249
+aS'tsp'
+p250
+asS'LSF'
+p251
+(lp252
+S'240'
+p253
+aS'Large-scale snowfall [m]'
+p254
+aS'lsf'
+p255
+asS'TCO3'
+p256
+(lp257
+S'206'
+p258
+aS'Total column ozone [kg m**-2 / Dobson before 20010612]'
+p259
+ag15
+asS'PV'
+p260
+(lp261
+S'60'
+p262
+aS'Potential vorticity [K m**2 kg**-1 s**-1]'
+p263
+aS'pv'
+p264
+asS'LWHR'
+p265
+(lp266
+S'154'
+p267
+aS'Long-wave heating rate [K]'
+p268
+ag15
+asS'PT'
+p269
+(lp270
+S'3'
+p271
+aS'Potential temperature [K]'
+p272
+aS'pt'
+p273
+asS'TCW'
+p274
+(lp275
+S'136'
+p276
+aS'Total column water [kg m**-2]'
+p277
+aS'tcw'
+p278
+asS'LSM'
+p279
+(lp280
+S'172'
+p281
+aS'Land/sea mask [0,1]'
+p282
+aS'lsm'
+p283
+asS'ISHF'
+p284
+(lp285
+S'231'
+p286
+aS'Instantaneous surface sensible heat flux [W m**-2]'
+p287
+aS'ishf'
+p288
+asS'UCTP'
+p289
+(lp290
+S'21'
+p291
+aS'Unbalanced component of temperature [K]'
+p292
+aS'uctp'
+p293
+asS'LSP'
+p294
+(lp295
+S'142'
+p296
+aS'Stratiform precipitation [m]'
+p297
+aS'lsp'
+p298
+asS'10V'
+p299
+(lp300
+S'166'
+p301
+aS'10 metre V wind component [m s**-1]'
+p302
+aS'vas'
+p303
+asS'TCC'
+p304
+(lp305
+S'164'
+p306
+aS'Total cloud cover [0-1]'
+p307
+aS'clt'
+p308
+asS'SSFR'
+p309
+(lp310
+S'6'
+p311
+aS'Soil sand fraction [0-1]'
+p312
+aS'ssfr'
+p313
+asS'10U'
+p314
+(lp315
+S'165'
+p316
+aS'10 metre U wind component [m s**-1]'
+p317
+aS'uas'
+p318
+asS'CIWC'
+p319
+(lp320
+S'247'
+p321
+aS'Cloud ice water content [kg kg**-1]'
+p322
+aS'cli'
+p323
+asS'CSF'
+p324
+(lp325
+S'239'
+p326
+aS'Convective snowfall [m]'
+p327
+aS'csf'
+p328
+asS'MN2T'
+p329
+(lp330
+S'202'
+p331
+aS'Minimum 2 metre temperature since previous post-processing [K]'
+p332
+aS'mn2t'
+p333
+asS'HCC'
+p334
+(lp335
+S'188'
+p336
+aS'High cloud cover [0-1]'
+p337
+aS'hcc'
+p338
+asS'BLH'
+p339
+(lp340
+S'159'
+p341
+aS'Boundary layer height [m]'
+p342
+aS'blh'
+p343
+asS'W'
+p344
+(lp345
+S'135'
+p346
+aS'Vertical velocity [Pa s**-1]'
+p347
+aS'wap'
+p348
+asS'DSRP'
+p349
+(lp350
+S'47'
+p351
+aS'Direct solar radiation [w m**-2]'
+p352
+ag15
+asS'CAPE'
+p353
+(lp354
+S'59'
+p355
+aS'Convective available potential energy [J Kg**-1]'
+p356
+aS'cape'
+p357
+asS'ES'
+p358
+(lp359
+S'44'
+p360
+aS'Snow evaporation [m]'
+p361
+ag15
+asS'VDVW'
+p362
+(lp363
+S'12'
+p364
+aS'V component of divergent wind [m s**-1]'
+p365
+aS'vdvw'
+p366
+asS'SWVL2'
+p367
+(lp368
+S'40'
+p369
+aS'Volumetric soil water layer 2 (7-28cm) [m**3 m**-3]'
+p370
+aS'swvl2'
+p371
+asS'10SI'
+p372
+(lp373
+S'207'
+p374
+aS'10 meter windspeed [m s**-1]'
+p375
+aS'sfcWind'
+p376
+asS'SLOR'
+p377
+(lp378
+S'163'
+p379
+aS'Slope of sub-gridscale orography []'
+p380
+ag15
+asS'ANOR'
+p381
+(lp382
+S'162'
+p383
+aS'Angle of sub-gridscale orography [rad]'
+p384
+ag15
+asS'SSR'
+p385
+(lp386
+S'176'
+p387
+aS'Surface solar radiation [W m**-2 s]'
+p388
+aS'ssr'
+p389
+asS'MGWS'
+p390
+(lp391
+S'196'
+p392
+aS'Meridional component of gravity wave stress [N m**-2 s]'
+p393
+ag15
+asS'LCC'
+p394
+(lp395
+S'186'
+p396
+aS'Low cloud cover [0-1]'
+p397
+aS'lcc'
+p398
+asS'STRC'
+p399
+(lp400
+S'211'
+p401
+aS'Surface net thermal radiation, clear sky [W m**-2]'
+p402
+aS'strc'
+p403
+asS'SWVL4'
+p404
+(lp405
+S'42'
+p406
+aS'Volumetric soil water layer 4 (100-289 cm)[m**3 m**-3]'
+p407
+aS'swvl4'
+p408
+asS'SD'
+p409
+(lp410
+S'141'
+p411
+aS'Snow depth [m]'
+p412
+aS'sd'
+p413
+asS'SWVL1'
+p414
+(lp415
+S'39'
+p416
+aS'Volumetric soil water layer 1 (0-7cm) [m**3 m**-3]'
+p417
+aS'swvl1'
+p418
+asS'STRF'
+p419
+(lp420
+S'1'
+p421
+aS'Stream function [m**2 s**-1]'
+p422
+ag15
+asS'SWVL3'
+p423
+(lp424
+S'41'
+p425
+aS'Volumetric soil water layer 3 (28-100 cm) [m**3 m**-3]'
+p426
+aS'swvl3'
+p427
+asS'STRD'
+p428
+(lp429
+S'175'
+p430
+aS'Surface thermal radiation downwards [W m**-2 s]'
+p431
+aS'strd'
+p432
+asS'GWD'
+p433
+(lp434
+S'197'
+p435
+aS'Gravity wave dissipation [W m**-2 s]'
+p436
+ag15
+asS'ACF'
+p437
+(lp438
+S'241'
+p439
+aS'Accumulated cloud fraction tendency [(-1 to 1)]'
+p440
+aS'acf'
+p441
+asS'EWSS'
+p442
+(lp443
+S'180'
+p444
+aS'East/West surface stress [N m**-2 s]'
+p445
+aS'tauu'
+p446
+asS'SLHF'
+p447
+(lp448
+S'147'
+p449
+aS'Surface latent heat flux [W m**-2 s]'
+p450
+aS'hfls'
+p451
+asS'ISTL4'
+p452
+(lp453
+S'38'
+p454
+aS'Ice surface temperature layer 4 [K]'
+p455
+aS'istl4'
+p456
+asS'ISTL1'
+p457
+(lp458
+S'35'
+p459
+aS'Ice surface temperature layer 1 [K]'
+p460
+aS'istl1'
+p461
+asS'ISTL3'
+p462
+(lp463
+S'37'
+p464
+aS'Ice surface temperature layer 3 [K]'
+p465
+aS'istl3'
+p466
+asS'ISTL2'
+p467
+(lp468
+S'36'
+p469
+aS'Ice surface temperature layer 2 [K]'
+p470
+aS'istl2'
+p471
+asS'FSR'
+p472
+(lp473
+S'244'
+p474
+aS'Forecast surface roughness [m]'
+p475
+aS'fsr'
+p476
+asS'BLD'
+p477
+(lp478
+S'145'
+p479
+aS'Boundary layer dissipation [W m**-2 s]'
+p480
+ag15
+asS'LSPF'
+p481
+(lp482
+S'50'
+p483
+aS'Large-scale precipitation fraction [s]'
+p484
+ag15
+asS'ASQ'
+p485
+(lp486
+S'233'
+p487
+aS'Apparent surface humidity [kg kg**-1]'
+p488
+aS'asq'
+p489
+asS'UDVW'
+p490
+(lp491
+S'11'
+p492
+aS'U component of divergent wind [m s**-1]'
+p493
+aS'udvw'
+p494
+asS'IE'
+p495
+(lp496
+S'232'
+p497
+aS'Instantaneous moisture flux [kg m**-2 s]'
+p498
+aS'evspsbl'
+p499
+asS'LGWS'
+p500
+(lp501
+S'195'
+p502
+aS'Lat. component of gravity wave stress [N m**-2 s]'
+p503
+aS'lgws'
+p504
+asS'TVL'
+p505
+(lp506
+S'29'
+p507
+aS'Type of low vegetation[]'
+p508
+ag15
+asS'MAGSS'
+p509
+(lp510
+S'48'
+p511
+aS'Magnitude of surface stress [N m**-2 s]'
+p512
+ag15
+asS'TVH'
+p513
+(lp514
+S'30'
+p515
+aS'Type of high vegetation[]'
+p516
+ag15
+asS'ASN'
+p517
+(lp518
+S'32'
+p519
+aS'Snow albedo [0-1]'
+p520
+aS'asn'
+p521
+asS'SRC'
+p522
+(lp523
+S'198'
+p524
+aS'Skin reservoir content [m]'
+p525
+ag15
+asS'CI'
+p526
+(lp527
+S'31'
+p528
+aS'Sea-ice cover [0-1]'
+p529
+aS'sic'
+p530
+asS'CL'
+p531
+(lp532
+S'26'
+p533
+aS'Lake cover [0-1]'
+p534
+aS'lakeFrac'
+p535
+asS'CC'
+p536
+(lp537
+S'248'
+p538
+aS'Cloud cover [0-1]'
+p539
+aS'clt'
+p540
+asS'ATMW'
+p541
+(lp542
+S'254'
+p543
+aS'Adiabatic tendency of meridional wind [m s**-1]'
+p544
+aS'atmw'
+p545
+asS'SRO'
+p546
+(lp547
+S'8'
+p548
+aS'Surface runoff [m]'
+p549
+aS'sro'
+p550
+asS'TCIW'
+p551
+(lp552
+S'79'
+p553
+aS'Total column ice water [kg m**-2]'
+p554
+aS'tciw'
+p555
+asS'SWHR'
+p556
+(lp557
+S'153'
+p558
+aS'Short-wave heating rate [K]'
+p559
+ag15
+asS'VEG'
+p560
+(lp561
+S'199'
+p562
+aS'Vegetation fraction [0-1]'
+p563
+aS'vegFrac'
+p564
+asS'R'
+p565
+(lp566
+S'157'
+p567
+aS'Relative humidity [%]'
+p568
+aS'hur'
+p569
+asS'V'
+p570
+(lp571
+S'132'
+p572
+aS'V velocity [m s**-1]'
+p573
+aS'va'
+p574
+asS'CP'
+p575
+(lp576
+S'143'
+p577
+aS'Convective precipitation [m]'
+p578
+aS'cp'
+p579
+asS'ATZE'
+p580
+(lp581
+S'253'
+p582
+aS'Adiabatic tendency of zonal wind [m s**-1]'
+p583
+aS'atze'
+p584
+asS'SMLT'
+p585
+(lp586
+S'45'
+p587
+aS'Snowmelt [m]'
+p588
+ag15
+asS'UCLN'
+p589
+(lp590
+S'22'
+p591
+aS'Unbalanced component of logarithm of surface pressure[]'
+p592
+aS'ucln'
+p593
+asS'SR'
+p594
+(lp595
+S'173'
+p596
+aS'Surface roughness [m]'
+p597
+aS'sr'
+p598
+asS'DHCC'
+p599
+(lp600
+S'216'
+p601
+aS'Diabatic heating by cumulus convection [K]'
+p602
+aS'dhcc'
+p603
+asS'SP'
+p604
+(lp605
+S'134'
+p606
+aS'Surface pressure [Pa]'
+p607
+aS'ps'
+p608
+asS'MX2T'
+p609
+(lp610
+S'201'
+p611
+aS'Maximum 2 metre temperature since previous post-processing [K]'
+p612
+aS'mx2t'
+p613
+asS'IEWS'
+p614
+(lp615
+S'229'
+p616
+aS'Instantaneous X surface stress [N m**-2]'
+p617
+aS'iews'
+p618
+asS'SSTK'
+p619
+(lp620
+S'34'
+p621
+aS'Sea surface temperature [K]'
+p622
+aS'tos'
+p623
+asS'TISR'
+p624
+(lp625
+S'212'
+p626
+aS' TOA incident solar radiation [W m**-2]'
+p627
+aS'rsdt'
+p628
+asS'INSS'
+p629
+(lp630
+S'230'
+p631
+aS'Instantaneous Y surface stress [N m**-2]'
+p632
+aS'inss'
+p633
+asS'ALW'
+p634
+(lp635
+S'242'
+p636
+aS'Accumulated liquid water tendency [(-1 to 1)]'
+p637
+aS'alw'
+p638
+asS'SF'
+p639
+(lp640
+S'144'
+p641
+aS'Snowfall (convective + stratiform) [m]'
+p642
+aS'sf'
+p643
+asS'PRES'
+p644
+(lp645
+S'54'
+p646
+aS'Pressure [Pa]'
+p647
+aS'pres'
+p648
+asS'NSSS'
+p649
+(lp650
+S'181'
+p651
+aS'North/South surface stress [N m**-2 s]'
+p652
+aS'tauv'
+p653
+asS'SSRC'
+p654
+(lp655
+S'210'
+p656
+aS'Surface net solar radiation, clear sky [W m**-2]'
+p657
+aS'ssrc'
+p658
+asS'SSRD'
+p659
+(lp660
+S'169'
+p661
+aS'Surface solar radiation downwards [W m**-2 s]'
+p662
+aS'rsds'
+p663
+asS'FLSR'
+p664
+(lp665
+S'245'
+p666
+aS'Forecast log of surface roughness for heat[]'
+p667
+aS'flsr'
+p668
+asS'AIW'
+p669
+(lp670
+S'249'
+p671
+aS'Accumulated ice water tendency [(-1 to 1)]'
+p672
+aS'aiw'
+p673
+asS'UCDV'
+p674
+(lp675
+S'23'
+p676
+aS'Unbalanced component of divergence [s**-1]'
+p677
+aS'ucdv'
+p678
+asS'10FG'
+p679
+(lp680
+S'49'
+p681
+aS'Wind gust at 10 metres [m s**-1]'
+p682
+ag15
+asS'SSRO'
+p683
+(lp684
+S'9'
+p685
+aS'Sub-surface runoff [m]'
+p686
+aS'sro'
+p687
+asS'CVL'
+p688
+(lp689
+S'27'
+p690
+aS'Low vegetation cover [0-1]'
+p691
+ag15
+asS'MSL'
+p692
+(lp693
+S'151'
+p694
+aS'Mean sea-level pressure [Pa]'
+p695
+aS'psl'
+p696
+asS'CVH'
+p697
+(lp698
+S'28'
+p699
+aS'High vegetation cover [0-1]'
+p700
+ag15
+asS'CTMW'
+p701
+(lp702
+S'223'
+p703
+aS'Convective tendency of meridional wind [m s**-1]'
+p704
+aS'ctmw'
+p705
+asS'ICE'
+p706
+(lp707
+S'250'
+p708
+aS'Ice age [1,0]'
+p709
+aS'ice'
+p710
+asS'LSRH'
+p711
+(lp712
+S'234'
+p713
+aS'Logarithm of surface roughness length for heat []'
+p714
+aS'lsrh'
+p715
+asS'TP'
+p716
+(lp717
+S'228'
+p718
+aS'Total precipitation [m]'
+p719
+aS'tp'
+p720
+asS'FAL'
+p721
+(lp722
+S'243'
+p723
+aS'Forecast albedo [0-1]'
+p724
+aS'fal'
+p725
+asS'var24'
+p726
+(lp727
+S'24'
+p728
+aS'Reserved for future unbalanced components[]'
+p729
+ag15
+asS'var25'
+p730
+(lp731
+S'25'
+p732
+aS'Reserved for future unbalanced components[]'
+p733
+ag15
+asS'SDOR'
+p734
+(lp735
+S'160'
+p736
+aS'Standard deviation of orography []'
+p737
+ag15
+asS'E'
+p738
+(lp739
+S'182'
+p740
+aS'Evaporation [m]'
+p741
+aS'e'
+p742
+asS'TNR'
+p743
+(lp744
+S'150'
+p745
+aS'Top net radiation[W m**-2 s ?]'
+p746
+ag15
+asS'SLT'
+p747
+(lp748
+S'43'
+p749
+aS'Soil type []'
+p750
+ag15
+asS'VDZW'
+p751
+(lp752
+S'218'
+p753
+aS'Vertical diffusion of zonal wind [m s**-1]'
+p754
+aS'vdzw'
+p755
+asS'AL'
+p756
+(lp757
+S'174'
+p758
+aS'Albedo [0-1]'
+p759
+aS'al'
+p760
+asS'VDMW'
+p761
+(lp762
+S'219'
+p763
+aS'Vertical diffusion of meridional wind [m s**-1]'
+p764
+aS'vdmw'
+p765
+asS'VO'
+p766
+(lp767
+S'138'
+p768
+aS'Vorticity (relative) [s**-1]'
+p769
+aS'vo'
+p770
+asS'Q'
+p771
+(lp772
+S'133'
+p773
+aS'Specific humidity [kg kg**-1]'
+p774
+aS'hus'
+p775
+asS'CRNH'
+p776
+(lp777
+S'227'
+p778
+aS'Change from removing negative humidity [kg kg**-1]'
+p779
+aS'crnh'
+p780
+asS'NEOV'
+p781
+(lp782
+S'193'
+p783
+aS'NESW component of subgrid orographic variance [m**2]'
+p784
+ag15
+asS'AT'
+p785
+(lp786
+S'127'
+p787
+aS'Atmospheric tide[]'
+p788
+ag15
+asS'STR'
+p789
+(lp790
+S'177'
+p791
+aS'Surface thermal radiation [W m**-2 s]'
+p792
+aS'str'
+p793
+asS'TSRC'
+p794
+(lp795
+S'208'
+p796
+aS'Top net solar radiation, clear sky [W m**-2]'
+p797
+aS'tsrc'
+p798
+asS'U'
+p799
+(lp800
+S'131'
+p801
+aS'U velocity [m s**-1]'
+p802
+aS'ua'
+p803
+asS'DHR'
+p804
+(lp805
+S'214'
+p806
+aS'Diabatic heating by radiation [K]'
+p807
+aS'dhr'
+p808
+asS'SUND'
+p809
+(lp810
+S'189'
+p811
+aS'Sunshine duration [s]'
+p812
+aS'sund'
+p813
+asS'RSN'
+p814
+(lp815
+S'33'
+p816
+aS'Snow density [kg m**-3]'
+p817
+aS'rsn'
+p818
+asS'BTMP'
+p819
+(lp820
+S'194'
+p821
+aS'Brightness temperature [K]'
+p822
+aS'btmp'
+p823
+asS'URTW'
+p824
+(lp825
+S'13'
+p826
+aS'U component of rotational wind [m s**-1]'
+p827
+aS'urtw'
+p828
+asS'MCC'
+p829
+(lp830
+S'187'
+p831
+aS'Medium cloud cover [0-1]'
+p832
+aS'mcc'
+p833
+asS'T'
+p834
+(lp835
+S'130'
+p836
+aS'Temperature [K]'
+p837
+aS'ta'
+p838
+asS'ISOR'
+p839
+(lp840
+S'161'
+p841
+aS'Anisotropy of sub-gridscale orography []'
+p842
+ag15
+asS'TTR'
+p843
+(lp844
+S'179'
+p845
+aS'Top thermal radiation [W m**-2 s]'
+p846
+aS'rlut'
+p847
+asS'MX2T24'
+p848
+(lp849
+S'51'
+p850
+aS'Maximum 2 metre temperature [K]'
+p851
+aS'tasmax'
+p852
+asS'HTLC'
+p853
+(lp854
+S'226'
+p855
+aS'Humidity tendency large-scale condensation [kg kg**-1]'
+p856
+aS'htlc'
+p857
+asS'VSO'
+p858
+(lp859
+S'200'
+p860
+aS'Variance of sub-gridscale orography [m**2]'
+p861
+ag15
+as.
