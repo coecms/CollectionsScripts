@@ -208,7 +208,6 @@ for yr in years:
           else:
               cmipvar = param128_dict[var][2]
               ntable="128"
-              cmipvar = param_dict[var][2]
           ncout = cmipvar + frq + "_ERAI_historical_" + level_dict[type][1] + "_" +  datestr + ".nc"
           nclist.writelines(ncout + "\n")
 # create a job file to run cdo & nco commands and submit job to queue
