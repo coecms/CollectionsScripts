@@ -1,5 +1,0 @@
-/g/data1/rr7/MERRA2/raw/M2I6NPANA.5.12.4
-/g/data1/rr7/MERRA2/raw/M2T1NXFLX.5.12.4
-/g/data1/rr7/MERRA2/raw/M2T1NXINT.5.12.4
-/g/data1/rr7/MERRA2/raw/M2T1NXRAD.5.12.4
-/g/data1/rr7/MERRA2/raw/M2T1NXSLV.5.12.4
