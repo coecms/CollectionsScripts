@@ -40,12 +40,6 @@ def parse_input():
 
 def define_dates(type,yr,mn,start,end):
     ''' return a date range for each file depending on selected type '''
-    startmn=mn
-    if type in ['oper_an_pv']:
-       startmn='01'
-    if type in ['oper_fc_sfc','oper_an_sfc','oper_an_pt','oper_an_pv']:
-        startday=['01']
-        endday=[str(monthrange(int(yr),int(mn))[1])]
     if type in ['oper_an_ml','oper_an_pl']:
         startday = ["01", "06", "11", "16", "21", "26"]
         endday=["05", "10", "15", "20", "25", str(monthrange(int(yr),int(mn))[1])]
@@ -56,7 +50,10 @@ def define_dates(type,yr,mn,start,end):
             ind=end + len(startday)-6
             startday=startday[:ind]
             endday=endday[:ind]
-    return startday,endday,startmn
+    else:
+        startday=['01']
+        endday=[str(monthrange(int(yr),int(mn))[1])]
+    return startday,endday
 
 
 def define_args(type):
@@ -80,11 +77,12 @@ def main():
     # assign time, step, param and levelist values for server request based on stream
     time,step,params,levels =  define_args(type)
     # if surface stream than use 'levtype' keyword instead of 'levelist'
-    if '_sfc' in type:
-        level_key='levtype'
-    else:
-        level_key='levelist'
-    print(level_key,levels)
+    #if '_sfc' in type:
+    #    level_key='levtype'
+    #else:
+    #    level_key='levelist'
+# we should'n t need the distinction, they both are in the dictionary
+    #print(level_key,levels)
     print(time,step)
     print(params)
     # assign year and list of months
@@ -92,14 +90,18 @@ def main():
     mntlist = args["month"]
     if mntlist is None:  mntlist = ["01","02","03","04","05","06","07","08","09","10","11","12"]
     # oper_an_pv data is always from Jan to latest available month
-    if len(mntlist) > 1 and type=='oper_an_pv': mntlist=[mntlist[-1]]
+    if len(mntlist) > 1 and type in ['oper_an_pv','oper_an_ml_sfc']:
+         startmn=mntlist[0]
+         mntlist=[mntlist[-1]]
     # assign arguments start and end to subset pressure and model stream file list if available
     start = args["start"]
     end = args["end"]
     # build MARS requests for each month and submit it using ecmwfapi.py
     for mn in mntlist:
         print( yr, mn)
-        startday,endday,startmn = define_dates(type,yr,mn,start,end) 
+        if type not in ['oper_an_pv','oper_an_ml_sfc']:
+            startmn=mn
+        startday,endday = define_dates(type,yr,mn,start,end) 
         # for each output file build filename and submit request
         for ind in range(len(startday)): 
             datestr = yr + startmn + startday[ind] + "/to/" + yr + mn + endday[ind] 
@@ -117,7 +119,7 @@ def main():
                     'type'     : type_split[1],
                     'class'    : "ei",
                     'param'    : params,
-                    level_key  : levels,
+                    'levelist'  : levels,
                     'area'     : "90/-180/-90/179.25",
                     'target'   : targetstr
                 })
