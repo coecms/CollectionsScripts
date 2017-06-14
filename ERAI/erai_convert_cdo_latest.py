@@ -13,10 +13,10 @@ def load_dict():
 # list variables for each type
     pv_vars = ["PT", "U", "V", "Q", "PRES", "Z", "O3"] 
     pt_vars = ["PV", "U", "V", "PRES"] 
-    ml_vars = ["T", "U", "V", "Q", "D", "W", "VO", "O3", "CC", "CIWC", "CLWC"]
+    ml_vars = ["T", "U", "V", "Q", "D", "W", "VO", "O3", "CC", "CIWC", "CLWC", "Z"]
     pl_vars = ["T", "U", "V", "R", "Q", "W", "PV", "O3", "CC", "CIWC", "CLWC", "Z"]
     ansfc_vars = ["10U", "10V", "2D", "2T", "CI", "MSL", "SKT", "SP", "SSTK", "TCWV","TCW","TCC","HCC","LCC","MCC",
-                  "VIMA", "VIEMF", "VINMF", "VIEWVF", "VINWVF", "VITCWV"]
+                 "VIMA", "VIEMF", "VINMF", "VIEWVF", "VINWVF", "VITCWV", "VINKEF", "VINHF", "VINGF", "VINTEF"] 
     fcsfc_vars = ["RO", "STRD", "TP", "LSP", "CP", "E", "MN2T", "MX2T", "SLHF", "SSRD","SF","10U", "10V", "2D", "2T","SP", "CAPE", "TSRC", "TTRC"]
     land_vars = ["STL1","STL2","STL3","STL4","SWVL1","SWVL2","SWVL3","SWVL4","SKT","RSN","SD","TSN","ASN"]
 # dict = 'type' : ['level description','filename level str',type vars list]
@@ -201,17 +201,22 @@ for yr in years:
       infiles= indir + "ei_" + type + "_*_" + t_range + "*" 
       datestr = build_dates(yr,mn,type)
       for var in variables:
-          # write netcdf name in cmip5 style
-          if type=="oper_an_sfc" and var in ["VIMA", "VIEMF", "VINMF", "VIEWVF", "VINWVF", "VITCWV"]:
+          if type=="oper_an_sfc" and var in ["VIMA", "VIEMF", "VINMF", "VIEWVF", "VINWVF", "VITCWV",
+                                             "VINGF", "VINKEF", "VINHF", "VINTEF"]:
               cmipvar = param162_dict[var][2]
               ntable="162"
           else:
               cmipvar = param128_dict[var][2]
               ntable="128"
+          # write netcdf name in cmip5 style
           ncout = cmipvar + frq + "_ERAI_historical_" + level_dict[type][1] + "_" +  datestr + ".nc"
           nclist.writelines(ncout + "\n")
 # create a job file to run cdo & nco commands and submit job to queue
           meta = [ncout,infiles,grid,ntable]
+          if type=="oper_an_ml" and var in ["Z"]:
+              t_range = yr + "[0-1][0-9][0-9][0-9]" 
+              infiles_sfc=infiles[:-17].replace(yr,'surface') + t_range + "*" 
+              meta = [ncout,infiles_sfc,grid,ntable]
           submit_job(var,meta)
 
 

@@ -1,30 +1,23 @@
 #!/usr/bin/python
-#
-# This script downloads NOAA-OISST data from the NOAA ftp server eclipse.ncdc.noaa.gov
-# used on raijin
-# uses ftplib module to connect and
-# hashlib module to calculate checksum
-# Author: Paola Petrelli paola.petrelli@utas.edu.au
-# Last modified date:
-#      2017-01-04 
-#      2017-03-03 changed the filter for files to include both ".nc.gz" and ".nc"
-
 from ftplib import FTP
-import os, time
-import zipfile
+import os
 from os.path import join, exists 
 import subprocess, hashlib
-from datetime import datetime
-from time import gmtime
 
 class DataGetter:
     def __init__(self):
+        user = open("/g/data1/ua8/ostia/.ostia")
+        details=user.readlines()
+        user.close()
+        uname=details[0]
+        pword=details[1]
         self.updatedFiles = []
         self.newFiles = []
         self.errorFiles = []
-        self.ftpHost = "eclipse.ncdc.noaa.gov"
+        #self.ftpHost = "data.ncof.co.uk"
+        self.ftpHost = "cmems.isac.cnr.it"
         self.ftp = FTP(self.ftpHost)
-        self.ftp.login()
+        self.ftp.login(uname,pword)
 
     def processDataset(self, datasetName, localDir):
         self.localDir = localDir
@@ -32,22 +25,31 @@ class DataGetter:
         self.updatedFiles = []
         self.newFiles = []
         self.errorFiles = []
-        self.remoteDir = "/pub/OI-daily-v2/NetCDF/"
+        self.remoteDir = "/Core/SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001/"
         print "Processing dataset..." + datasetName
-        os.chdir(self.localDir + datasetName + "/raw")   # go to dataset dir
-        self.ftp.cwd(self.remoteDir) # got to ftp dataset dir 
-        self.ftp.retrlines("LIST", self.yearList.append)
-        for year in self.yearList:
-             print year[-4:]
-             if year[-4:]=="2017":
-                 fileList = self.doDirectory(year,datasetName,True)
+        os.chdir(self.localDir + datasetName)
+        print os.getcwd()
+        self.ftp.cwd(self.remoteDir + datasetName) 
+        #self.ftp.cwd(datasetName)
+        print "ftp ", self.ftp.pwd()
+        for year in ['2017']:
+             print year
+             os.chdir(year)
+             self.ftp.cwd(year)
+             monthList = []
+             self.ftp.retrlines("LIST", monthList.append)
+             for month in monthList:
+                 fileList = self.doDirectory(month)
                  baseDir = os.getcwd()
                  for f in fileList:
-                     self.handleFile(baseDir, f)
-                 self.ftp.cwd("../../")  # get out of ftp year dir
-                 os.chdir("../")     #get out of local year dir
-        os.chdir("../../")   # get out of local dataset dir
-        self.ftp.cwd("../")  # get out of ftp dataset dir 
+                       self.handleFile(baseDir, f, year)
+                 os.chdir("../")
+                # print os.getcwd()
+                 self.ftp.cwd("../")
+        os.chdir("../")
+        print os.getcwd()
+        self.ftp.cwd("../")
+        print "ftp ", self.ftp.pwd()
                
 
               
@@ -67,34 +69,44 @@ class DataGetter:
         for f in self.errorFiles:
             print f
  
-    def doDirectory(self, dirLine, datasetName, makedir):
+    def doDirectory(self, dirLine):
+        print dirLine
         if(dirLine[0] == 'd'):
             dirName = dirLine[(dirLine.rindex(" ") + 1):]
-            if makedir:
-               if(not os.path.exists(dirName)):
-                  os.mkdir(dirName)
-               os.chdir(dirName)  # go to "year"/"month" dir
-            self.ftp.cwd(dirName+"/"+datasetName)
+            #create the LOCAL dataset directory if one 
+            #doesn't exist already
+            if(not os.path.exists(dirName)):
+                os.mkdir(dirName)
+            print os.path.exists(dirName), dirName
+            os.chdir(dirName)
+            print os.getcwd()
+            #print dirName
+            self.ftp.cwd(dirName)
+            print "ftp ", self.ftp.pwd()
             lineList = []
             self.ftp.retrlines("LIST", lineList.append)
+            #print self.ftp.dir()
+            #print lineList
             return lineList 
 
-    def handleFile(self, baseDir, fileLine):
+    def handleFile(self, baseDir, fileLine, year):
         if fileLine[0]== '-'  :
             try:    
                 line = fileLine[(fileLine.rindex(" ") + 1):]
                 filename = line.split(" ")[-1]
-                if ".nc" in filename[-6:]:
+                if filename[0:4] == year:
+                #self.fileList.append(filename)
                    self.doFile(baseDir, filename)    
+                #self.doFile(baseDir, filename)    
+                ##pass
             except ValueError:
                 pass
 
     def doFile(self, baseDir, filename):
         curDir = os.getcwd()
-# if files exists already compare to one online to check if need updating
         if(os.path.exists(filename)):
-            if self.check_mdt(filename):
-               print "file exists to update", filename
+            if not self.check_md5sum(filename):
+               print "file exists 2 update", filename
                if(self.downloadFile(filename, True)):
                     self.updatedFiles.append(os.path.abspath(filename))
         else:
@@ -111,29 +123,30 @@ class DataGetter:
         #local_md5 = subprocess.check_output(["md5sum", filename]).split()[0]
         # use this is working on downloader 
         local_md5 = subprocess.Popen(['md5sum', filename], stdout=subprocess.PIPE).communicate()[0]
-        print local_md5, ftp_md5, filename
+        local_md5=local_md5.split(" ")[0]
         return local_md5 == ftp_md5
 
-
-    def check_mdt(self,filename):
-        result = self.ftp.sendcmd("MDTM " + filename)
-        remoteLastModDate = datetime(*(time.strptime(result[4:], "%Y%m%d%H%M%S")[0:6]))
-        localModTime = gmtime(os.path.getmtime(filename))
-        if (os.stat(filename).st_size == 0):
-           return  True 
-        return localModTime < remoteLastModDate.timetuple() 
-
-
+    
     def downloadFile(self, filename, isUpdate):
         newFile = None
+        #newFile = open(filename, "wb")
         
-        newFile = open(filename, "wb")
+        if(isUpdate):
+            newFile = open(filename + ".1", "wb")
+        else:
+            newFile = open(filename, "wb")
         try:
             try:
                 print "Trying to download file... " + filename
-                self.ftp.retrbinary("RETR %s" % filename, newFile.write)
-                os.popen("chgrp ua8 " + filename).readline() 
+                self.ftp.retrbinary("RETR " + filename, newFile.write)
                 os.popen("chmod g+rxX " + filename).readline() 
+                os.popen("chgrp ua8 " + filename).readline() 
+                if(isUpdate):
+                    lines = os.popen("mv " + filename + ".1 " + filename).readlines() 
+                    if(len(lines) != 0):
+                        print lines
+                        self.errorFiles.append(filename + " counld not move file")
+                        return False
                 return True
             except Exception, e:
                 self.errorFiles.append(filename + " could not be downloaded:")
@@ -148,5 +161,7 @@ class DataGetter:
 
 if __name__ == "__main__":
         getter = DataGetter()
-        getter.processDataset("AVHRR", "/g/data1/ua8/NOAA_OISST/")
+        #getter.processDataset("SST_GLO_SST_L4_REP_OBSERVATIONS_010_011", "/g/data1/ua8/ostia/Core1/")
+        getter.processDataset("METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2", "/g/data1/ua8/ostia/Core/SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001/")
+        #getter.processDataset("SST_GLO_SST_L4_NRT_OBSERVATIONS_010_005", "/g/data1/ua8/ostia/Core/")
         getter.close()
