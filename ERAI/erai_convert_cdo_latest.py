@@ -51,6 +51,8 @@ def submit_job(var,meta):
 #   retrieve info necessary to write job to submit to queue
     param_dict={"128": param128_dict, "162": param162_dict}[meta[3]]
     param=param_dict[var][0]
+    # if param=129.128 ie geopotential from oper_an_ml then we want to select only the current month
+    if param=='129': param+=',month='+mn
     cmipvar = param_dict[var][2]
     lname = param_dict[var][1]
     level = level_dict[type][0]
