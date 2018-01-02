@@ -265,8 +265,9 @@ units = "N m**-2 s"
 /
 &parameter
 param = 49.128
-out_name =
+out_name =wg10
 long_name = "Wind gust at 10 metres "
+standard_name = wind_speed_of_gust
 units = "m s**-1"
 /
 &parameter
@@ -502,7 +503,7 @@ units = "W m**-2 s"
 /
 &parameter
 param = 150.128
-out_name =
+out_name =tnr
 long_name = "Top net radiation"
 units = "W m**-2 s ?"
 /

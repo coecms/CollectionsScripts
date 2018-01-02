@@ -10,7 +10,7 @@ ntable="128"
 param_dict={}
 #open table text file
 #ftable = open('ecmwf_128table.txt','r')
-ftable = open('ecmwf_'+ntable+'table.txt','r')
+ftable = open('ecmwf_param_table'+ntable+'.txt','r')
 #now create the cdo table
 cdotable = open('cdo_param_table'+ntable, 'w')
 #read file & close

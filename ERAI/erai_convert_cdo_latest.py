@@ -17,7 +17,8 @@ def load_dict():
     pl_vars = ["T", "U", "V", "R", "Q", "W", "PV", "O3", "CC", "CIWC", "CLWC", "Z"]
     ansfc_vars = ["10U", "10V", "2D", "2T", "CI", "MSL", "SKT", "SP", "SSTK", "TCWV","TCW","TCC","HCC","LCC","MCC",
                  "VIMA", "VIEMF", "VINMF", "VIEWVF", "VINWVF", "VITCWV", "VINKEF", "VINHF", "VINGF", "VINTEF"] 
-    fcsfc_vars = ["RO", "STRD", "TP", "LSP", "CP", "E", "MN2T", "MX2T", "SLHF", "SSRD","SF","10U", "10V", "2D", "2T","SP", "CAPE", "TSRC", "TTRC"]
+    fcsfc_vars = ["RO", "STRD", "TP", "LSP", "CP", "E", "MN2T", "MX2T", "SLHF", "SSRD",
+                  "SF","10U", "10V", "2D", "2T","SP", "CAPE", "TSRC", "TTRC","SSHF","10FG"]
     land_vars = ["STL1","STL2","STL3","STL4","SWVL1","SWVL2","SWVL3","SWVL4","SKT","RSN","SD","TSN","ASN"]
 # dict = 'type' : ['level description','filename level str',type vars list]
     level_dict = {"oper_an_ml" : ["analysis on model","an-ml",ml_vars], "oper_an_pv" : ["analysis on potential vorticity","an-pv", pv_vars], "oper_an_pt" : ["analysis on potential temperature","an-pt", pt_vars], "oper_an_sfc" : ["analysis on surface","an-sfc",ansfc_vars], "oper_fc_sfc" : ["forecast on surface","fc-sfc",fcsfc_vars], "oper_an_pl" : ["analysis on pressure","an-pl",pl_vars], "land" : ["land experiment version 2", "land", land_vars]}
