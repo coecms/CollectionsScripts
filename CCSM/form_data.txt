@@ -1,0 +1,15 @@
+username:https://www.earthsystemgrid.org/myopenid/*****
+password:******
+identity:https://www.earthsystemgrid.org/myopenid/******
+ext1mode:fetch_request
+returnto:https://www.earthsystemgrid.org/login/openid
+realm:https://www.earthsystemgrid.org/
+ext1ifavailable:openid_email,openid_firstName,openid_lastName
+assochandle:1517522307464-7
+mode:checkid_setup
+ext1typeopenidemail:http://openid.net/schema/contact/email
+nsext1:http://openid.net/srv/ax/1.0
+claimedid:https://www.earthsystemgrid.org/myopenid/******
+ext1typeopenidlastname:http://openid.net/schema/namePerson/last
+ns:http://specs.openid.net/auth/2.0
+ext1typeopenidfirstname:http://openid.net/schema/namePerson/first

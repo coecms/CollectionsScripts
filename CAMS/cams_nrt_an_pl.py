@@ -16,7 +16,7 @@ from ecmwfapi import ECMWFDataServer
 
 def parse_input():
     ''' Parse input arguments '''
-    parser = argparse.ArgumentParser(description='Convert ERA Interim grib files to 1 variable monthly netcdf files')
+    parser = argparse.ArgumentParser(description='Download CAMS realtime data')
     parser.add_argument('-y','--year', help='Year', required=True)
     parser.add_argument('-m','--month', type=str, help='Month', required=True)
     parser.add_argument('-d','--day', type=int, help='Day to start from, default 01', required=False)

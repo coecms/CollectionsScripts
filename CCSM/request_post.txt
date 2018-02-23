@@ -1,0 +1,6 @@
+looks like the checkboxes are a POST to https://www.earthsystemgrid.org/dataset/ncl.640.src/downloadLogicalFiles.html with parameters
+```logicalFileId    86b9bec2-fa01-11e6-a976-00c0f03d5b7c
+datasetId    55557788-f9ff-11e6-a976-00c0f03d5b7c
+```
+and then the download link on the next page is a POST to https://www.earthsystemgrid.org/download/generateWgetScript.wget with
+```logicalFileId    86b9bec2-fa01-11e6-a976-00c0f03d5b7c```

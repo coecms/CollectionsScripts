@@ -133,7 +133,7 @@ class DataGetter:
                 print "Trying to download file... " + filename
                 self.ftp.retrbinary("RETR %s" % filename, newFile.write)
                 os.popen("chgrp ua8 " + filename).readline() 
-                os.popen("chmod g+rxX " + filename).readline() 
+                #os.popen("chmod g+rX " + filename).readline() 
                 return True
             except Exception, e:
                 self.errorFiles.append(filename + " could not be downloaded:")

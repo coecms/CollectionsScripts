@@ -1,4 +1,4 @@
-# To download operative surface analysis (full resolution) ERA Interim data from the ECMWF data server
+# To download operative surface analysis (full resolution) CAMS Near-Real-Time data data from the ECMWF data server
 # Timestep is 6hrs
 # Resolution is 0.75X0.75 degree, area is global
 # to change them change the relative fields

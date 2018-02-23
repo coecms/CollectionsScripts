@@ -1,8 +1,8 @@
 #!/bin/bash -l
 # set up environment to run erai_download.py
-module load python/2.7.3
-export PYTHONPATH=/apps/python/2.7.3/lib:/apps/python/2.7.3/include:/apps/python/2.7.3/bin:/home/581/pxp581/ecmwf-api-client-python
-export PATH=$PATH:/home/581/pxp581/ecmwf-api-client-python
+module load python
+export PYTHONPATH=$PYTHONPATH:/home/581/pxp581/.local/lib/python2.7/site-packages/ecmwf_api_client-1.3-py2.7.egg
+export PATH=$PATH:/home/581/pxp581/.local/lib/python2.7/site-packages/ecmwf_api_client-1.3-py2.7.egg
 
 # check which is last year and month downloaded
 cd /g/data1/ub4/erai/grib/oper_an_sfc/fullres/
@@ -38,7 +38,7 @@ sleep 25m
 if [ -s $( ls ei_oper_an_ml_075x075_90N0E90S35925E_${yr}${mn}01_*) ]; 
 then 
     python erai_download.py -t oper_an_pv -y $yr -m $mn  > tmp_log_an_pv_${yr}.txt &
-    sleep 5h 
+    sleep 1h 
     #echo 'file is empty'
     #sleep 5m 
     logs=($(ls tmp_log_*.txt | sort ))
