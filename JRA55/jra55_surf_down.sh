@@ -1,5 +1,5 @@
 cd /g/data1/ua8/Download/JRA55/raw/Hist/Daily/anl_surf
-wget -O Authentication.log --save-cookies auth.rda_ucar_edu --post-data="email=paola.petrelli@utas.edu.au&passwd=FM27g2010&action=login"  https://rda.ucar.edu/cgi-bin/login
+wget -O Authentication.log --save-cookies auth.rda_ucar_edu --post-data="email=&action=login"  https://rda.ucar.edu/cgi-bin/login
 #for yr in `seq 1958 2013`;
 #do
 #wget -N --load-cookies auth.rda_ucar_edu http://rda.ucar.edu/data/ds628.0/anl_surf/$yr/anl_surf.001_pres.reg_tl319.${yr}010100_${yr}123118
