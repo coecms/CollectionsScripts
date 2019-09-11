@@ -28,7 +28,7 @@ class DataGetter:
         self.ftpHost = "hokusai.eorc.jaxa.jp"
         self.ftp = FTP(self.ftpHost)
         #self.ftp.login(uname, pword)
-        self.ftp.login("rainmap", "Niskur+1404")
+        self.ftp.login("", "")
 
     def processDataset(self, datasetName, localDir):
         self.localDir = localDir
