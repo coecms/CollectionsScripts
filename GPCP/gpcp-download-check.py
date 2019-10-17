@@ -29,6 +29,7 @@ limitations under the License.
    c - to indicate that year is current, 
        this will call the download_dir function first,
        to check if there are new files to download 
+   t - timestep mon or day, default day is true
    f - this forces local chksum to be re-calculated even if local file exists
  The script will look for the local and remote checksum files:
      gpcp_<local/remote>_cksum_<year>.txt
@@ -55,10 +56,10 @@ limitations under the License.
 
 from __future__ import print_function
 
-try:
-    import xml.etree.cElementTree as ET
-except ImportError:
-    import xml.etree.ElementTree as ET
+#try:
+#    import xml.etree.cElementTree as ET
+#except ImportError:
+#    import xml.etree.ElementTree as ET
 import os, sys
 import time, calendar
 import argparse
@@ -76,67 +77,11 @@ def parse_input():
     parser.add_argument('-y','--year', type=int, help='year to process', required=True)
     parser.add_argument('-c','--current', help='current year, download always first',
                         action='store_true', required=False)
+    parser.add_argument('-t','--tstep', help='timestep either mon or day, day is default',
+                        default='day', required=False)
     parser.add_argument('-f','--force', help='force local cheksum calculation even if file is present',
                         action='store_true', required=False)
     return vars(parser.parse_args())
-
-
-def retrieve_xml(hdf_list,fremote):
-    ''' extract from the online xml files the checksums and save them to a file
-        input: hdf_list a list of all the HDF files in the "year" directory '''
-    global http_url, session
-    dremote={}
-    # from each filename derived the complete url for the corresponding XML file online
-    # access Checksum from xml field CheckSumValue and save to file
-    for fhdf in hdf_list:
-        fyr,fday = get_tstamp(fhdf)
-        #tree = ET.fromstring(urllopen("/".join([http_url,fyr,fday,fhdf+".xml"])).read())
-        tree = ET.fromstring(session.get("/".join([http_url,fyr,fday,fhdf+".xml"])).content)
-        for elem in tree.iter():
-            if elem.tag == 'CheckSumValue':
-                fremote.write(fhdf + " " + elem.text + "\n") 
-                dremote[fhdf]=elem.text
-    return dremote
-        
-
-def get_tstamp(fname):
-    '''from each filename derive from the time stamp, year and day string'''
-    global yr, syr
-    tstamp=fname.split(".")[1]
-    hour=fname.split(".")[2]
-    iday = time.strptime(tstamp, "%Y%m%d").tm_yday
-    # 00 hour is stored in previous day directory!
-    fyr=syr
-    if hour == "00":
-       iday = iday - 1
-       if iday == 0:
-           fyr= str(yr-1)
-           iday=365
-           if calendar.isleap(yr-1):
-               iday=366
-    fday = str(iday).zfill(3)
-    return fyr, fday
-
-
-def calculate_cksum(hdf_list,flocal):
-    ''' calculate cksum for local files for year '''
-    dlocal={}
-    for fhdf in hdf_list: 
-        p = subprocess.Popen("cksum "+fhdf, stdout=subprocess.PIPE, shell=True)
-        (output, err) = p.communicate()
-        dlocal[fhdf] = output.split(" ")[0]
-        flocal.write(output) 
-    return dlocal
-    
-
-def read_sums(fopen,kind):
-    ''' read checksum values for checksum files from respective yearly files '''
-    dresult={}
-    for l in fopen.readlines():
-        bits = l.replace("\n","").split(" ")
-        if kind=='local': dresult[bits[2]] = bits[0]
-        if kind=='remote': dresult[bits[0]] = bits[1]
-    return dresult
 
 
 def compare_sums(dlocal,dremote):
@@ -205,24 +150,21 @@ def open_session():
 
 def main():
     global yr, syr, http_url, data_dir, session
-    # check python version
-    if sys.version_info < ( 2, 7):
-        print('This script needs a python version >= 2.7')
-        sys.exit()
-    # define http_url for GPCC http server and data_dir for local collection
-    if day:
-       http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/access/"
-       data_dir='/g/data/ua8/GPCP/day/v1-3/'
-    else:
-       http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-monthly/access/"
-       data_dir='/g/data/ua8/GPCP/mon/v2-3/'
-    run_dir='/g/data/ua8/Download/GPCP/'
     # read year as external argument and move to data directory
     inputs=parse_input()
     yr=inputs["year"]
     syr=str(yr)
     current=inputs["current"]
+    tstep=inputs["tstep"]
     force=inputs["force"]
+    # define http_url for GPCC http server and data_dir for local collection
+    if tstep == 'day':
+       http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/access/"
+       data_dir='/mnt/ua8/GPCP/day/v1-3/'
+    else:
+       http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-monthly/access/"
+       data_dir='/mnt/ua8/GPCP/mon/v2-3/'
+    run_dir='/mnt/ua8/Download/GPCP/'
     try:
         os.chdir(data_dir + "/" + syr)
     except:
