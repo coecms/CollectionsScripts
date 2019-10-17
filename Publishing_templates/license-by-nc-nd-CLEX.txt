@@ -1,7 +1,7 @@
 You can see the license online at 
 http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
-Licensor - ARC Centre of Excellence for Climate System Science (ARCCSS) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail coecss@unsw.edu.au
+Licensor - ARC Centre of Excellence for Climate Extremes (CLEX) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail clex@unsw.edu.au
 
 Licensed Material - <title> (version <version>) 
 

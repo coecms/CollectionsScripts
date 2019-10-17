@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Copyright 2018 ARC Centre of Excellence for Climate Systems Science
+Copyright 2019 ARC Centre of Excellence for Climate Systems Science
 
 author: Paola Petrelli <paola.petrelli@utas.edu.au>
 
@@ -210,8 +210,12 @@ def main():
         print('This script needs a python version >= 2.7')
         sys.exit()
     # define http_url for GPCC http server and data_dir for local collection
-    http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/access/"
-    data_dir='/g/data/ua8/GPCP/day/v1-3/'
+    if day:
+       http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/access/"
+       data_dir='/g/data/ua8/GPCP/day/v1-3/'
+    else:
+       http_url="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-monthly/access/"
+       data_dir='/g/data/ua8/GPCP/mon/v2-3/'
     run_dir='/g/data/ua8/Download/GPCP/'
     # read year as external argument and move to data directory
     inputs=parse_input()

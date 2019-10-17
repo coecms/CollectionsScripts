@@ -2,15 +2,14 @@
 
 <brief description-can use one in dmp>
 
-These simulations were run by Dr Duncan Ackerley of the ARC Centre of Excellence for Climate Systems Sciences, as part of a <research program/ project>
+This dataset was produced by <name> <surname> for the ARC Centre of Excellence for Climate Extremes, as part of the  <research program> research program.
 
 This dataset includes <variables list>.
 
 <relevant links>
-ARCCSS CMS wiki: http://climate-cms.unsw.wikispaces.net/ARCCSS+published+datasets
 
 File organisation:
-/g/data1/ua8/ARCCSS_Data/<dataset>/<version_dir>/....   contains the CF - ACDD compliant netcdf output
+/g/data1/ks32/CLEX_Data/<dataset>/<version_dir>/....   contains the CF - ACDD compliant netcdf output
 
 filenames:
 <...>

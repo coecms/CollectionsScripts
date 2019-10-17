@@ -14,10 +14,11 @@ cd /g/data1/ua8/ARCCSS_Data/<dataset>/tmp/
 # delete extra attribute
 # ncatted -h -O -a <att-name>,<var-name>,d,, $1
 # ncatted -h -O -a <att-name>,global,d,, $1 
+ncatted -h -O -a Conventions,global,o,c,"CF-1.6, ACDD-1.3" $1
 ncatted -h -O -a title,global,o,c,"<title> <version>" $1
 ncatted -h -O -a summary,global,c,c,"" $1
 ncatted -h -O -a source,global,c,c,"" $1
-ncatted -h -O -a license,global,c,c,"http://creativecommons.org/licenses/by-nc-nd/4.0/" $1
+ncatted -h -O -a license,global,c,c,"http://creativecommons.org/licenses/<license>/4.0/" $1
 ncatted -h -O -a id,global,c,c,"http://dx.doi.org/<doi>" $1
 ncatted -h -O -a product_version,global,c,c,"<nversion>" $1
 ncatted -h -a contact,global,c,c,"<creator_email>" $1
