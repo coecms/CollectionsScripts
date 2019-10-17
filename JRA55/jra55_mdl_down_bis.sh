@@ -1,5 +1,5 @@
 cd /g/data1/ua8/Download/JRA55/raw/Hist/Daily/anl_mdl/$1
-wget -O Authentication.log --save-cookies auth.rda_ucar_edu --post-data="email=paola.petrelli@utas.edu.au&passwd=FM27g2010&action=login"  https://rda.ucar.edu/cgi-bin/login
+wget -O Authentication.log --save-cookies auth.rda_ucar_edu --post-data="email=&action=login"  https://rda.ucar.edu/cgi-bin/login
 for mn in `seq --format="%02.f" 1 12`;
 do
   for sday in 01 11 21;
